@@ -1,0 +1,13 @@
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.AssemblyReference.cache
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.SuggestedBindingRedirects.cache
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.Resources.resources
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.GenerateResource.cache
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.CoreCompileInputs.cache
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.exe.config
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.exe
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.pdb
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.xml
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.exe
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.xml
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.pdb
+C:\Users\hugo0\Desktop\IUT-Demineur-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.reglages.resources
