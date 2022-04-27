@@ -6,7 +6,8 @@
     Private nbColonneDefaut As Integer = 8
     Private pathDefaut As String = ".\config\config.txt"
     Private tempsDefaut As Integer = 10
-    Private nbBombeMax As Integer = 10
+    Private nbBombeMax As Integer = 50
+    Private nbBombeDefaut As Integer = 10
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim estOk As Boolean = True
@@ -42,7 +43,7 @@
         For i = 1 To nbBombeMax
             ListBox1.Items.Add(i & " bombes")
         Next
-        ListBox1.SelectedIndex = nbBombeMax - 1
+        ListBox1.SelectedIndex = nbBombeDefaut - 1
         TextBox2.Text = tempsDefaut
         HScrollBar1.Minimum = nbMin
         HScrollBar1.Maximum = nbMax
@@ -61,7 +62,7 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ListBox1.SelectedIndex = nbBombeMax - 1
+        ListBox1.SelectedIndex = nbBombeDefaut - 1
         TextBox2.Text = tempsDefaut
         TextBox1.Text = pathDefaut
         HScrollBar1.Value = nbMax / 2
