@@ -2,14 +2,20 @@
 
 Public Class reglages
 
-    Private nbLigneDefaut As Integer = 8
-    Private nbMin As Integer = 2
-    Private nbMax As Integer = 16
-    Private nbColonneDefaut As Integer = 8
-    Private pathDefaut As String = ".\config\config.txt"
-    Private tempsDefaut As Integer = 10
-    Private nbBombeMax As Integer = 50
-    Private nbBombeDefaut As Integer = 10
+    Private Const nbLigneDefaut As Integer = 8
+    Private Const nbMin As Integer = 2
+    Private Const nbMax As Integer = 16
+    Private Const nbColonneDefaut As Integer = 8
+    Private Const pathDefaut As String = ".\config\config.txt"
+    Private Const tempsDefaut As Integer = 10
+    Private Const nbBombeMax As Integer = 50
+    Private Const nbBombeDefaut As Integer = 10
+
+    Private nbLigne As Integer
+    Private nbColonne As Integer
+    Private path As String
+    Private temps As Integer
+    Private nbBombe As Integer
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim estOk As Boolean = True
@@ -22,6 +28,11 @@ Public Class reglages
             estOk = False
         End If
         If estOk Then
+            nbLigne = HScrollBar1.Value
+            nbColonne = HScrollBar2.Value
+            path = TextBox1.Text
+            temps = TextBox2.Text
+            nbBombe = ListBox1.SelectedValue
             Hide()
         End If
     End Sub
@@ -78,8 +89,13 @@ Public Class reglages
         Dim choix As MsgBoxResult
         choix = MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention")
         If choix = vbOK Then
-            Hide()
             Button3.PerformClick()
+            nbLigne = HScrollBar1.Value
+            nbColonne = HScrollBar2.Value
+            path = TextBox1.Text
+            temps = TextBox2.Text
+            nbBombe = ListBox1.SelectedValue
+            Hide()
         Else
             e.Cancel = True
         End If
@@ -92,6 +108,26 @@ Public Class reglages
             accueil.Enabled = True
         End If
     End Sub
+
+    Public Function getNbLigne() As Integer
+        Return nbLigne
+    End Function
+
+    Public Function getNbColonne() As Integer
+        Return nbColonne
+    End Function
+
+    Public Function getPath() As String
+        Return path
+    End Function
+
+    Public Function getTemps() As Integer
+        Return temps
+    End Function
+
+    Public Function getNbBombe() As String
+        Return nbBombe
+    End Function
 
 End Class
 
