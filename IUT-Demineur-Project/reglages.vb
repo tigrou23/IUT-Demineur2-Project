@@ -42,6 +42,7 @@ Public Class reglages
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        accueil.Enabled = False
         For i = 1 To nbBombeMax
             ListBox1.Items.Add(i & " bombes")
         Next
@@ -73,8 +74,6 @@ Public Class reglages
         Label4.Text = HScrollBar2.Value
     End Sub
 
-
-
     Private Sub reglages_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Dim choix As MsgBoxResult
         choix = MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention")
@@ -85,6 +84,14 @@ Public Class reglages
             e.Cancel = True
         End If
     End Sub
+
+    Private Sub reglages_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        If Visible = True Then
+            accueil.Enabled = False
+        Else
+            accueil.Enabled = True
+        End If
+    End Sub
+
 End Class
 
-todo: gérer les activation en fonction des fenêtres
