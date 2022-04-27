@@ -1,4 +1,6 @@
-﻿Public Class reglages
+﻿Imports System.ComponentModel
+
+Public Class reglages
 
     Private nbLigneDefaut As Integer = 8
     Private nbMin As Integer = 2
@@ -71,4 +73,18 @@
         Label4.Text = HScrollBar2.Value
     End Sub
 
+
+
+    Private Sub reglages_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim choix As MsgBoxResult
+        choix = MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention")
+        If choix = vbOK Then
+            Hide()
+            Button3.PerformClick()
+        Else
+            e.Cancel = True
+        End If
+    End Sub
 End Class
+
+todo: gérer les activation en fonction des fenêtres

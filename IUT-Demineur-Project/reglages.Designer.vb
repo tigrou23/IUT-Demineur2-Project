@@ -134,7 +134,7 @@ Partial Class reglages
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(195, 50)
         Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Retour"
+        Me.Button2.Text = "Sauvegarder"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label8
@@ -216,7 +216,7 @@ Partial Class reglages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(634, 589)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label9)
