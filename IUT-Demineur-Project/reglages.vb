@@ -65,6 +65,11 @@ Public Class reglages
         HScrollBar2.Minimum = nbMin
         HScrollBar2.Maximum = nbMax
         HScrollBar2.Value = nbMax / 2
+        nbLigne = nbLigneDefaut
+        nbColonne = nbColonneDefaut
+        path = pathDefaut
+        temps = tempsDefaut
+        nbBombe = nbBombeDefaut
     End Sub
 
     Private Sub HScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar1.Scroll

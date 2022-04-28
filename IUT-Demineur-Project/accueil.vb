@@ -4,10 +4,6 @@
         Close()
     End Sub
 
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        reglages.Show()
-    End Sub
-
     Private Sub accueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'faut le mettre en focus
@@ -21,5 +17,9 @@
         ComboBox1.Items.Add("Franck")
         ComboBox1.Items.Add("Magali")
 
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        reglages.Show()
     End Sub
 End Class

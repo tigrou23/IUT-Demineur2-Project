@@ -80,10 +80,9 @@ Partial Class accueil
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.reglage
-        Me.PictureBox1.ImageLocation = ""
-        Me.PictureBox1.Location = New System.Drawing.Point(572, 48)
+        Me.PictureBox1.Location = New System.Drawing.Point(554, 49)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 48)
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
         '
