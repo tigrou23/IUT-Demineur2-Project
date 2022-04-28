@@ -79,6 +79,14 @@
     <Compile Include="accueil.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Box.vb" />
+    <Compile Include="Grille.vb" />
+    <Compile Include="jeu.Designer.vb">
+      <DependentUpon>jeu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jeu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -101,10 +109,14 @@
     <Compile Include="reglages.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Theme.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="accueil.resx">
       <DependentUpon>accueil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jeu.resx">
+      <DependentUpon>jeu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -25,3 +25,4 @@ C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT-
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.xml
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.pdb
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.accueil.resources
+C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.jeu.resources

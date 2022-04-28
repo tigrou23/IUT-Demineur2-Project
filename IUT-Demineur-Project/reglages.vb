@@ -79,7 +79,6 @@ Public Class reglages
     Private Sub HScrollBar2_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar2.Scroll
         Label4.Text = HScrollBar2.Value
     End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ListBox1.SelectedIndex = nbBombeDefaut - 1
         TextBox2.Text = tempsDefaut
