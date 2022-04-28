@@ -79,7 +79,8 @@ Partial Class accueil
         '
         'PictureBox1
         '
-        Me.PictureBox1.ImageLocation = "C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\reglage.png"
+        Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.reglage
+        Me.PictureBox1.ImageLocation = ""
         Me.PictureBox1.Location = New System.Drawing.Point(572, 48)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(49, 48)
