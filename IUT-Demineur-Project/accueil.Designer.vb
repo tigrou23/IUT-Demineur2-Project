@@ -27,8 +27,9 @@ Partial Class accueil
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,15 +79,6 @@ Partial Class accueil
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Nom"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.reglage
-        Me.PictureBox1.Location = New System.Drawing.Point(554, 49)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox1.TabIndex = 21
-        Me.PictureBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -99,12 +91,35 @@ Partial Class accueil
         Me.Label2.Text = "Le nom est obligatoire"
         Me.Label2.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.reglage
+        Me.PictureBox1.Location = New System.Drawing.Point(554, 49)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.TabIndex = 21
+        Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Red
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(48, 20)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(514, 13)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "L'application n'a pas trouvé le fichier de configuration. Veuillez changer le che" &
+    "min d'accès dans les réglages"
+        Me.Label3.Visible = False
+        '
         'accueil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 231)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
@@ -127,4 +142,5 @@ Partial Class accueil
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

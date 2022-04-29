@@ -6,7 +6,6 @@ Public Class reglages
     Private Const nbMin As Integer = 2
     Private Const nbMax As Integer = 16
     Private Const nbColonneDefaut As Integer = 8
-    Private Const pathDefaut As String = ".\config\config.txt"
     Private Const tempsDefaut As Integer = 10
     Private Const nbBombeMax As Integer = 50
     Private Const nbBombeDefaut As Integer = 10
@@ -33,6 +32,9 @@ Public Class reglages
             path = TextBox1.Text
             temps = TextBox2.Text
             nbBombe = ListBox1.SelectedValue
+            TextBox1.Enabled = False
+            PictureBox2.Visible = False
+            PictureBox1.Visible = True
             Hide()
         End If
     End Sub
@@ -58,6 +60,7 @@ Public Class reglages
             ListBox1.Items.Add(i & " bombes")
         Next
         ListBox1.SelectedIndex = nbBombeDefaut - 1
+        TextBox1.Text = Application.StartupPath & "\config.txt"
         TextBox2.Text = tempsDefaut
         HScrollBar1.Minimum = nbMin
         HScrollBar1.Maximum = nbMax
@@ -67,7 +70,7 @@ Public Class reglages
         HScrollBar2.Value = nbMax / 2
         nbLigne = nbLigneDefaut
         nbColonne = nbColonneDefaut
-        path = pathDefaut
+        path = Application.StartupPath & "\config.txt"
         temps = tempsDefaut
         nbBombe = nbBombeDefaut
     End Sub
@@ -79,10 +82,14 @@ Public Class reglages
     Private Sub HScrollBar2_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar2.Scroll
         Label4.Text = HScrollBar2.Value
     End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         ListBox1.SelectedIndex = nbBombeDefaut - 1
         TextBox2.Text = tempsDefaut
-        TextBox1.Text = pathDefaut
+        TextBox1.Text = Application.StartupPath & "\config.txt"
+        TextBox1.Enabled = False
+        PictureBox2.Visible = False
+        PictureBox1.Visible = True
         HScrollBar1.Value = nbMax / 2
         HScrollBar2.Value = nbMax / 2
         Label8.Text = HScrollBar1.Value
@@ -94,6 +101,9 @@ Public Class reglages
         choix = MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention")
         If choix = vbOK Then
             Button3.PerformClick()
+            TextBox1.Enabled = False
+            PictureBox2.Visible = False
+            PictureBox1.Visible = True
             nbLigne = HScrollBar1.Value
             nbColonne = HScrollBar2.Value
             path = TextBox1.Text
@@ -111,6 +121,18 @@ Public Class reglages
         Else
             accueil.Enabled = True
         End If
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        TextBox1.Enabled = False
+        PictureBox2.Visible = False
+        PictureBox1.Visible = True
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        TextBox1.Enabled = True
+        PictureBox1.Visible = False
+        PictureBox2.Visible = True
     End Sub
 
     Public Function getNbLigne() As Integer
@@ -131,6 +153,17 @@ Public Class reglages
 
     Public Function getNbBombe() As String
         Return nbBombe
+    End Function
+
+    Public Function verifFichier() As Boolean
+        Try
+            Dim readFile As System.IO.StreamReader
+            readFile = New System.IO.StreamReader(path)
+            readFile.ReadLine()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
     End Function
 
 End Class

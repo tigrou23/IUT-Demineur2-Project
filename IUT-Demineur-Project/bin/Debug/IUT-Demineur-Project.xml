@@ -22,12 +22,17 @@ IUT-Demineur-Project
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.lock">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.reglage">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:IUT_Demineur_Project.My.Resources.Resources.reglage1">
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.unlock">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>

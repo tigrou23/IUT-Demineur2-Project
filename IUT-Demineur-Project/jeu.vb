@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class jeu
+
     Private grille As Grille
 
     Public Sub init(l As Integer, c As Integer, p As String, n As Integer, tmp As String, th As Theme)

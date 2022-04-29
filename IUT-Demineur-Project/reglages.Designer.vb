@@ -41,6 +41,10 @@ Partial Class reglages
         Me.HScrollBar2 = New System.Windows.Forms.HScrollBar()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -71,9 +75,10 @@ Partial Class reglages
         '
         'TextBox1
         '
+        Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(103, 204)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(241, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(381, 20)
         Me.TextBox1.TabIndex = 6
         Me.TextBox1.Text = ".\config\config.txt"
         '
@@ -212,12 +217,33 @@ Partial Class reglages
         Me.Label12.TabIndex = 27
         Me.Label12.Text = "colonnes"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.unlock
+        Me.PictureBox2.Location = New System.Drawing.Point(500, 183)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox2.TabIndex = 29
+        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.lock
+        Me.PictureBox1.Location = New System.Drawing.Point(500, 183)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.TabStop = False
+        '
         'reglages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(634, 589)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label4)
@@ -239,6 +265,8 @@ Partial Class reglages
         Me.Controls.Add(Me.Label1)
         Me.Name = "reglages"
         Me.Text = "reglages"
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -263,4 +291,6 @@ Partial Class reglages
     Friend WithEvents HScrollBar2 As HScrollBar
     Friend WithEvents Label9 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
