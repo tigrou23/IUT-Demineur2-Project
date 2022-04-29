@@ -99,9 +99,7 @@ Public Class reglages
     End Sub
 
     Private Sub reglages_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Dim choix As MsgBoxResult
-        choix = MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention")
-        If choix = vbOK Then
+        If MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention") = vbOK Then
             Button3.PerformClick()
             TextBox1.Enabled = False
             PictureBox2.Visible = False

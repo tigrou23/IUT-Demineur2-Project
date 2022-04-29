@@ -26,7 +26,9 @@ Public Class jeu
     End Sub
 
     Private Sub jeu_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        accueil.Show()
+        If MsgBox("Etes-vous certain de vouloir quitter ? Votre partie sera perdue", vbOKCancel, "Attention") = vbOK Then
+            accueil.Show()
+        End If
     End Sub
 
 End Class
