@@ -19,7 +19,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If ComboBox1.SelectedItem <> "" Then
             Hide()
-            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.White, Color.Black))
+            jeu.init(reglages.getNbColonne, reglages.getNbLigne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.White, Color.Black))
             jeu.Show()
         Else
             Label2.Visible = True
