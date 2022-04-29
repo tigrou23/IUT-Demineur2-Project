@@ -80,6 +80,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Box.vb" />
+    <Compile Include="Donnees.vb" />
     <Compile Include="Grille.vb" />
     <Compile Include="jeu.Designer.vb">
       <DependentUpon>jeu.vb</DependentUpon>

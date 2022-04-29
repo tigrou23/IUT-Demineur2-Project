@@ -26,3 +26,18 @@ C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT-
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.pdb
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.accueil.resources
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.jeu.resources
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.exe.config
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.exe
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.pdb
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\bin\Debug\IUT-Demineur-Project.xml
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.AssemblyReference.cache
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.SuggestedBindingRedirects.cache
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.accueil.resources
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.jeu.resources
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.Resources.resources
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.reglages.resources
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.GenerateResource.cache
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.vbproj.CoreCompileInputs.cache
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.exe
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.xml
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT-Demineur-Project.pdb

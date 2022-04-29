@@ -21,7 +21,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If ComboBox1.SelectedItem <> "" Then
             Hide()
-            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.White, Color.Black))
+            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.Gray, Color.Black))
             jeu.Show()
         ElseIf ComboBox1.Text.Length = 0 Then
             Label2.Visible = True
@@ -33,7 +33,7 @@
         Else
             'ici rajouter l'écriture du nom
             Hide()
-            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.White, Color.Black))
+            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.Gray, Color.Black))
             jeu.Show()
         End If
     End Sub
