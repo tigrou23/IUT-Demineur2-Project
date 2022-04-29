@@ -32,7 +32,6 @@ Partial Class reglages
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -43,6 +42,7 @@ Partial Class reglages
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -132,15 +132,6 @@ Partial Class reglages
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Choix du thème"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(387, 499)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(195, 50)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Sauvegarder"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -236,12 +227,21 @@ Partial Class reglages
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.disquette
+        Me.Button2.Location = New System.Drawing.Point(443, 485)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(80, 78)
+        Me.Button2.TabIndex = 16
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'reglages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(634, 589)
+        Me.ClientSize = New System.Drawing.Size(634, 583)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label12)

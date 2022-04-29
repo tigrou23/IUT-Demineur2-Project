@@ -13,8 +13,8 @@ Public Class jeu
         Dim tlp = New TableLayoutPanel
         tlp.AutoSize = True
         tlp.SuspendLayout()
-        For i As Integer = 0 To grille.get_Ligne() - 1
-            For j As Integer = 0 To grille.get_Colonne() - 1
+        For i As Integer = 0 To grille.get_Colonne() - 1
+            For j As Integer = 0 To grille.get_Ligne() - 1
                 Dim box = New Box(th.get_couleur_Fo_Case, th.get_couleur_Bd_Case)
                 tlp.Controls.Add(box.get_Button, i, j)
             Next
