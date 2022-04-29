@@ -43,6 +43,7 @@ Partial Class reglages
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -87,9 +88,9 @@ Partial Class reglages
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(38, 250)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 13)
+        Me.Label3.Size = New System.Drawing.Size(101, 13)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Nombre de mines :"
+        Me.Label3.Text = "Nombre de mine(s) :"
         '
         'ListBox1
         '
@@ -120,9 +121,9 @@ Partial Class reglages
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(215, 447)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(43, 13)
+        Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 14
-        Me.Label6.Text = "minutes"
+        Me.Label6.Text = "minute(s)"
         '
         'Button1
         '
@@ -236,12 +237,25 @@ Partial Class reglages
         Me.Button2.TabIndex = 16
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(103, 473)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox1.TabIndex = 30
+        Me.CheckBox1.Text = "Timer activé"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'reglages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(634, 583)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label12)
@@ -293,4 +307,5 @@ Partial Class reglages
     Friend WithEvents Label12 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

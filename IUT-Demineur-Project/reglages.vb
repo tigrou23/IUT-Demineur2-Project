@@ -6,7 +6,7 @@ Public Class reglages
     Private Const nbMin As Integer = 2
     Private Const nbMax As Integer = 16
     Private Const nbColonneDefaut As Integer = 8
-    Private Const tempsDefaut As Integer = 10
+    Private Const tempsDefaut As Integer = 1
     Private Const nbBombeMax As Integer = 50
     Private Const nbBombeDefaut As Integer = 10
 
@@ -73,6 +73,7 @@ Public Class reglages
         path = Application.StartupPath & "\config.txt"
         temps = tempsDefaut
         nbBombe = nbBombeDefaut
+        CheckBox1.CheckState = CheckState.Checked
     End Sub
 
     Private Sub HScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar1.Scroll
@@ -94,6 +95,7 @@ Public Class reglages
         HScrollBar2.Value = nbMax / 2
         Label8.Text = HScrollBar1.Value
         Label4.Text = HScrollBar2.Value
+        CheckBox1.CheckState = CheckState.Checked
     End Sub
 
     Private Sub reglages_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -109,6 +111,7 @@ Public Class reglages
             path = TextBox1.Text
             temps = TextBox2.Text
             nbBombe = ListBox1.SelectedValue
+            CheckBox1.CheckState = CheckState.Checked
             Hide()
         Else
             e.Cancel = True
