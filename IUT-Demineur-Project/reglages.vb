@@ -1,6 +1,4 @@
-﻿Imports System.ComponentModel
-
-Public Class reglages
+﻿Public Class reglages
 
     Private Const nbLigneDefaut As Integer = 8
     Private Const nbMin As Integer = 2
@@ -15,6 +13,7 @@ Public Class reglages
     Private path As String
     Private temps As Integer
     Private nbBombe As Integer
+    Private timerActif As Boolean = True
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim estOk As Boolean = True
@@ -31,7 +30,7 @@ Public Class reglages
             nbColonne = HScrollBar2.Value
             path = TextBox1.Text
             temps = TextBox2.Text
-            nbBombe = ListBox1.SelectedValue
+            nbBombe = ListBox1.SelectedIndex + 1
             TextBox1.Enabled = False
             PictureBox2.Visible = False
             PictureBox1.Visible = True
@@ -77,14 +76,32 @@ Public Class reglages
     End Sub
 
     Private Sub HScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar1.Scroll
+        Dim nbCase As Integer
         Label8.Text = HScrollBar1.Value
+        nbCase = HScrollBar1.Value * HScrollBar2.Value
+        ListBox1.Items.Clear()
+        For i = 1 To nbCase / 2
+            ListBox1.Items.Add(i & " bombes")
+        Next
+        ListBox1.SelectedIndex = (nbCase / 2) / 2 - 1
     End Sub
 
     Private Sub HScrollBar2_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar2.Scroll
+        Dim nbCase As Integer
         Label4.Text = HScrollBar2.Value
+        nbCase = HScrollBar1.Value * HScrollBar2.Value
+        ListBox1.Items.Clear()
+        For i = 1 To nbCase / 2
+            ListBox1.Items.Add(i & " bombes")
+        Next
+        ListBox1.SelectedIndex = (nbCase / 2) / 2 - 1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ListBox1.Items.Clear()
+        For i = 1 To nbBombeDefaut
+            ListBox1.Items.Add(i & " bombes")
+        Next
         ListBox1.SelectedIndex = nbBombeDefaut - 1
         TextBox2.Text = tempsDefaut
         TextBox1.Text = Application.StartupPath & "\config.txt"
@@ -96,24 +113,6 @@ Public Class reglages
         Label8.Text = HScrollBar1.Value
         Label4.Text = HScrollBar2.Value
         CheckBox1.CheckState = CheckState.Checked
-    End Sub
-
-    Private Sub reglages_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If MsgBox("Etes-vous certain de vouloir quitter ? Toute modification sera perdue", vbOKCancel, "Attention") = vbOK Then
-            Button3.PerformClick()
-            TextBox1.Enabled = False
-            PictureBox2.Visible = False
-            PictureBox1.Visible = True
-            nbLigne = HScrollBar1.Value
-            nbColonne = HScrollBar2.Value
-            path = TextBox1.Text
-            temps = TextBox2.Text
-            nbBombe = ListBox1.SelectedValue
-            CheckBox1.CheckState = CheckState.Checked
-            Hide()
-        Else
-            e.Cancel = True
-        End If
     End Sub
 
     Private Sub reglages_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
@@ -156,6 +155,14 @@ Public Class reglages
         Return nbBombe
     End Function
 
+    Public Function getTimerActif() As Boolean
+        If timerActif Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
     Public Function verifFichier() As Boolean
         Try
             Dim readFile As System.IO.StreamReader
@@ -167,5 +174,21 @@ Public Class reglages
         End Try
     End Function
 
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.CheckState = CheckState.Checked Then
+            TextBox2.Enabled = True
+            timerActif = True
+        Else
+            TextBox2.Enabled = False
+            timerActif = False
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        If MsgBox("Aucun changement ne sera enregistré", vbOKCancel, "Attention") = vbOK Then
+            Hide()
+            accueil.Enabled = True
+        End If
+    End Sub
 End Class
 

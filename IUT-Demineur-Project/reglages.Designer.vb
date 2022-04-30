@@ -40,10 +40,12 @@ Partial Class reglages
         Me.HScrollBar2 = New System.Windows.Forms.HScrollBar()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,7 +53,7 @@ Partial Class reglages
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(38, 24)
+        Me.Label1.Location = New System.Drawing.Point(38, 73)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(123, 13)
         Me.Label1.TabIndex = 0
@@ -60,7 +62,7 @@ Partial Class reglages
         'HScrollBar1
         '
         Me.HScrollBar1.LargeChange = 1
-        Me.HScrollBar1.Location = New System.Drawing.Point(103, 57)
+        Me.HScrollBar1.Location = New System.Drawing.Point(103, 106)
         Me.HScrollBar1.Name = "HScrollBar1"
         Me.HScrollBar1.Size = New System.Drawing.Size(381, 31)
         Me.HScrollBar1.TabIndex = 4
@@ -68,7 +70,7 @@ Partial Class reglages
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(38, 169)
+        Me.Label2.Location = New System.Drawing.Point(38, 218)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(213, 13)
         Me.Label2.TabIndex = 5
@@ -77,7 +79,7 @@ Partial Class reglages
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(103, 204)
+        Me.TextBox1.Location = New System.Drawing.Point(103, 253)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(381, 20)
         Me.TextBox1.TabIndex = 6
@@ -86,7 +88,7 @@ Partial Class reglages
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(38, 250)
+        Me.Label3.Location = New System.Drawing.Point(38, 299)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 13)
         Me.Label3.TabIndex = 7
@@ -95,7 +97,7 @@ Partial Class reglages
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(103, 290)
+        Me.ListBox1.Location = New System.Drawing.Point(103, 339)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(241, 82)
         Me.ListBox1.TabIndex = 10
@@ -103,7 +105,7 @@ Partial Class reglages
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(38, 403)
+        Me.Label5.Location = New System.Drawing.Point(38, 452)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(82, 13)
         Me.Label5.TabIndex = 11
@@ -111,7 +113,7 @@ Partial Class reglages
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(103, 443)
+        Me.TextBox2.Location = New System.Drawing.Point(103, 492)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(104, 20)
         Me.TextBox2.TabIndex = 13
@@ -119,7 +121,7 @@ Partial Class reglages
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(215, 447)
+        Me.Label6.Location = New System.Drawing.Point(215, 496)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 14
@@ -127,7 +129,7 @@ Partial Class reglages
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 499)
+        Me.Button1.Location = New System.Drawing.Point(41, 548)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(195, 50)
         Me.Button1.TabIndex = 15
@@ -137,7 +139,7 @@ Partial Class reglages
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(507, 66)
+        Me.Label8.Location = New System.Drawing.Point(507, 115)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(13, 13)
         Me.Label8.TabIndex = 18
@@ -145,7 +147,7 @@ Partial Class reglages
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(387, 441)
+        Me.Button3.Location = New System.Drawing.Point(387, 490)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(195, 23)
         Me.Button3.TabIndex = 19
@@ -156,7 +158,7 @@ Partial Class reglages
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(126, 403)
+        Me.Label10.Location = New System.Drawing.Point(126, 452)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(148, 13)
         Me.Label10.TabIndex = 21
@@ -167,7 +169,7 @@ Partial Class reglages
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(257, 169)
+        Me.Label11.Location = New System.Drawing.Point(257, 218)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(148, 13)
         Me.Label11.TabIndex = 22
@@ -177,7 +179,7 @@ Partial Class reglages
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(507, 123)
+        Me.Label4.Location = New System.Drawing.Point(507, 172)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(13, 13)
         Me.Label4.TabIndex = 25
@@ -186,7 +188,7 @@ Partial Class reglages
         'HScrollBar2
         '
         Me.HScrollBar2.LargeChange = 1
-        Me.HScrollBar2.Location = New System.Drawing.Point(103, 114)
+        Me.HScrollBar2.Location = New System.Drawing.Point(103, 163)
         Me.HScrollBar2.Name = "HScrollBar2"
         Me.HScrollBar2.Size = New System.Drawing.Size(381, 31)
         Me.HScrollBar2.TabIndex = 24
@@ -194,7 +196,7 @@ Partial Class reglages
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(526, 66)
+        Me.Label9.Location = New System.Drawing.Point(526, 115)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(34, 13)
         Me.Label9.TabIndex = 26
@@ -203,16 +205,37 @@ Partial Class reglages
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(526, 123)
+        Me.Label12.Location = New System.Drawing.Point(526, 172)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(50, 13)
         Me.Label12.TabIndex = 27
         Me.Label12.Text = "colonnes"
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(103, 522)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox1.TabIndex = 30
+        Me.CheckBox1.Text = "Timer activé"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.IUT_Demineur_Project.My.Resources.Resources.fleche
+        Me.PictureBox3.Location = New System.Drawing.Point(23, 22)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(36, 33)
+        Me.PictureBox3.TabIndex = 31
+        Me.PictureBox3.TabStop = False
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.unlock
-        Me.PictureBox2.Location = New System.Drawing.Point(500, 183)
+        Me.PictureBox2.Location = New System.Drawing.Point(500, 232)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
         Me.PictureBox2.TabIndex = 29
@@ -222,7 +245,7 @@ Partial Class reglages
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.lock
-        Me.PictureBox1.Location = New System.Drawing.Point(500, 183)
+        Me.PictureBox1.Location = New System.Drawing.Point(500, 232)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
         Me.PictureBox1.TabIndex = 28
@@ -231,30 +254,20 @@ Partial Class reglages
         'Button2
         '
         Me.Button2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.disquette
-        Me.Button2.Location = New System.Drawing.Point(443, 485)
+        Me.Button2.Location = New System.Drawing.Point(443, 534)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(80, 78)
         Me.Button2.TabIndex = 16
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(103, 473)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox1.TabIndex = 30
-        Me.CheckBox1.Text = "Timer activé"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'reglages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(634, 583)
+        Me.ClientSize = New System.Drawing.Size(634, 633)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -279,6 +292,7 @@ Partial Class reglages
         Me.Controls.Add(Me.Label1)
         Me.Name = "reglages"
         Me.Text = "reglages"
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -308,4 +322,5 @@ Partial Class reglages
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

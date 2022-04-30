@@ -27,12 +27,27 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.fleche">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.lock">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.reglage">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.retour">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.sauvegarde">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
