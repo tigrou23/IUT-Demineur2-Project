@@ -1,4 +1,6 @@
-﻿Public Class accueil
+﻿Imports System.ComponentModel
+
+Public Class accueil
 
     Private Const maxLettre As Integer = 50
 
@@ -9,9 +11,10 @@
     End Sub
 
     Private Sub accueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'à optimiser mais indispensable pour charger les réglages
         reglages.Show()
         reglages.Hide()
-        'à optimiser mais indispensable pour charger les réglages
+
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -31,7 +34,7 @@
             Label4.Visible = True
             ComboBox1.Focus()
         Else
-            'ici rajouter l'écriture du nom
+            stockJoueur.enregistrementJoueur(ComboBox1.Text, 0, 0, 0, 0)
             Hide()
             jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.Gray, Color.Black))
             jeu.Show()
@@ -52,26 +55,30 @@
     End Sub
 
     Private Sub accueil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        If reglages.verifFichier() = True Then
-            Button1.Enabled = True
-            Button2.Enabled = True
-            ComboBox1.Enabled = True
-            Label3.Visible = False
-            Dim readFile As System.IO.StreamReader
-            readFile = New System.IO.StreamReader(reglages.getPath)
-            Dim line As String = "tmp"
-            While line <> ""
-                line = readFile.ReadLine()
-                If line <> "" Then
-                    ComboBox1.Items.Add(line)
-                End If
-            End While
-        Else
-            Label3.Visible = True
-            Button1.Enabled = False
-            Button2.Enabled = False
-            ComboBox1.Enabled = False
+        If reglages.aChange() = True Then
+            If reglages.verifFichier() = True Then
+                stockJoueur.debut(reglages.getPath())
+                Button1.Enabled = True
+                Button2.Enabled = True
+                ComboBox1.Enabled = True
+                Label3.Visible = False
+            Else
+                Label3.Visible = True
+                Button1.Enabled = False
+                Button2.Enabled = False
+                ComboBox1.Enabled = False
+            End If
+            reglages.Change()
         End If
+    End Sub
+
+    Private Sub accueil_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        fin(reglages.getPath)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Enabled = False
+        scores.Show()
     End Sub
 
 End Class

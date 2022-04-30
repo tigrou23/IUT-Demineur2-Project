@@ -28,9 +28,9 @@ Partial Class accueil
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +49,7 @@ Partial Class accueil
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(195, 50)
         Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Score"
+        Me.Button2.Text = "Scores"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -92,15 +92,6 @@ Partial Class accueil
         Me.Label2.Text = "Le nom est obligatoire"
         Me.Label2.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.reglage
-        Me.PictureBox1.Location = New System.Drawing.Point(554, 49)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox1.TabIndex = 21
-        Me.PictureBox1.TabStop = False
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -125,6 +116,15 @@ Partial Class accueil
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Le nom doit être supérieur à trois lettres"
         Me.Label4.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.reglage
+        Me.PictureBox1.Location = New System.Drawing.Point(554, 49)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.TabIndex = 21
+        Me.PictureBox1.TabStop = False
         '
         'accueil
         '

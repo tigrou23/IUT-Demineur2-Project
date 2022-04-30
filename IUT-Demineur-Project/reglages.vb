@@ -8,6 +8,7 @@
     Private Const nbBombeMax As Integer = 50
     Private Const nbBombeDefaut As Integer = 10
 
+    Private ChangePath As Boolean = False
     Private nbLigne As Integer
     Private nbColonne As Integer
     Private path As String
@@ -40,6 +41,7 @@
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Label11.Visible = False
+        ChangePath = True
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
@@ -155,6 +157,14 @@
         Return nbBombe
     End Function
 
+    Public Function aChange() As Boolean
+        Return ChangePath
+    End Function
+
+    Public Function Change()
+        ChangePath = False
+    End Function
+
     Public Function getTimerActif() As Boolean
         If timerActif Then
             Return True
@@ -168,6 +178,7 @@
             Dim readFile As System.IO.StreamReader
             readFile = New System.IO.StreamReader(path)
             readFile.ReadLine()
+            readFile.Close()
             Return True
         Catch ex As Exception
             Return False
@@ -190,5 +201,6 @@
             accueil.Enabled = True
         End If
     End Sub
+
 End Class
 

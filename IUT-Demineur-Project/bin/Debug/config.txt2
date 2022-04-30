@@ -1,0 +1,17 @@
+﻿Hugo 56 6 1 65 79
+Eylea 54 5 4 5 65
+Felix 45 5 45 6 6
+Michel 2 5 78 9 4
+Jean 54 7 87 78 8
+Anne 1 1 0 0 1
+Aurelie 8 8 45 5 7
+Franck 4 56 78 8 6
+Magali 7 89 78 9 9
+Jacques 74 1 9 6 5
+Paul 8 7 7 78
+
+Dim writeFile As System.IO.StreamWriter = New System.IO.StreamWriter(reglages.getPath)
+        For i = 0 To tab.Length - 1
+            writeFile.WriteLine(tab(i).getNom(), tab(i).getPartieJouee(), tab(i).getTempsJoue())
+        Next
+        writeFile.Close() 8

@@ -88,6 +88,15 @@
     <Compile Include="jeu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Joueur.vb" />
+    <Compile Include="JoueurComparer.vb" />
+    <Compile Include="scores.Designer.vb">
+      <DependentUpon>scores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="scores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stockJoueur.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reglages.resx">
       <DependentUpon>reglages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scores.resx">
+      <DependentUpon>scores.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
