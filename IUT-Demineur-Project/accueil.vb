@@ -14,7 +14,6 @@ Public Class accueil
         'à optimiser mais indispensable pour charger les réglages
         reglages.Show()
         reglages.Hide()
-
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
