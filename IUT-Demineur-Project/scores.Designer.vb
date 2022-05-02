@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class scores
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class scores
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -68,7 +68,7 @@ Partial Class scores
         Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(188, 340)
+        Me.ComboBox1.Location = New System.Drawing.Point(188, 333)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(239, 21)
         Me.ComboBox1.TabIndex = 4
@@ -76,7 +76,7 @@ Partial Class scores
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(71, 343)
+        Me.Label3.Location = New System.Drawing.Point(71, 336)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 13)
         Me.Label3.TabIndex = 5
@@ -102,7 +102,7 @@ Partial Class scores
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(454, 331)
+        Me.Button1.Location = New System.Drawing.Point(454, 324)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(146, 37)
         Me.Button1.TabIndex = 8
@@ -114,7 +114,7 @@ Partial Class scores
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(677, 398)
+        Me.ClientSize = New System.Drawing.Size(677, 390)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox2)

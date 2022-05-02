@@ -33,4 +33,20 @@
         Return nbCasePerf
     End Function
 
+    Public Function setPartieJouee(p As Integer)
+        partieJouee = p
+    End Function
+
+    Public Function setTempsJoue(t As Integer)
+        tempsJoue = t
+    End Function
+
+    Public Function setTempsPerf(t As Integer)
+        tempsPerf = t
+    End Function
+
+    Public Function setNbCasePerf(c As Integer)
+        nbCasePerf = c
+    End Function
+
 End Class

@@ -7,11 +7,12 @@
     Private placementBombe() As Integer
     Dim listeVide As ArrayList
     Private theme As Theme
-    Public Sub enregistrement(nbL As Integer, nbC As Integer, nbB As Integer, th As Theme) 'ajouter le tempss
+    Public Sub enregistrement(nbL As Integer, nbC As Integer, nbB As Integer, tmp As Integer, th As Theme) 'ajouter le tempss
         nbBombe = nbB
         nbLignes = nbL
         nbColonnes = nbC
         theme = th
+        temps = tmp
         placementBombe = New Integer(nbBombe - 1) {}
         listeVide = New ArrayList
         grille = New Box(nbLignes - 1)() {}
@@ -52,7 +53,7 @@
                 (locLigne <> l2 And locColonne <> c1) And
                 (locLigne <> l2 And locColonne <> colonne) And
                 (locLigne <> l2 And locColonne <> c2)
-            grille(locLigne)(locColonne).set_Color(Color.Red)
+            'grille(locLigne)(locColonne).set_Color(Color.Red)
             grille(locLigne)(locColonne).set_Valeur(Box.Valeur.Bomb)
             placementBombe(i) = locLigne * nbColonnes + locColonne
         Next
@@ -114,6 +115,10 @@
     Public Function get_Theme()
         Return theme
     End Function
+    Public Function get_Temps()
+        Return temps
+    End Function
+
     Public Function get_BoxBtn(i As Integer, j As Integer)
         Return grille(i)(j).btn
     End Function

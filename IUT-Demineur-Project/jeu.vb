@@ -5,11 +5,17 @@ Public Class jeu
     Private cptCase As Integer
     Public Sub init(l As Integer, c As Integer, p As String, n As Integer, tmp As String, th As Theme)
         cptCase = l * c - n
-        enregistrement(l, c, n, th)
+        enregistrement(l, c, n, tmp, th)
     End Sub
 
     Private Sub Formulaire_Jeu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim th As Theme = Donnees.get_Theme
+        If (reglages.getTimerActif) Then
+            Label1.Text = Donnees.get_Temps * 60 + 1
+        Else
+            Label1.Visible = False
+        End If
+        Timer1.Interval = 1000
         tlp.AutoSize = True
         tlp.Margin = New Padding(0, 100, 0, 0)
         tlp.SuspendLayout()
@@ -25,8 +31,20 @@ Public Class jeu
         For Each btn As Control In tlp.Controls
             AddHandler btn.Click, AddressOf First_Click
         Next
+        afficheHeure(sender, e)
     End Sub
+
+    Private Sub afficheHeure(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
+        If Label1.Visible = True Then
+            Label1.Text = Label1.Text - 1
+            If Label1.Text = 0 Then
+                Partie_Perdue()
+            End If
+        End If
+    End Sub
+
     Private Sub First_Click(sender As Object, e As EventArgs)
+        Timer1.Start()
         Drapeau.Enabled = True
         Drapeau.FlatStyle = FlatStyle.Flat
         Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_backColor_Box()
@@ -40,12 +58,6 @@ Public Class jeu
         For Each btn As Control In tlp.Controls
             AddHandler btn.Click, AddressOf Btn_Clicked
         Next
-    End Sub
-
-    Private Sub jeu_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If MsgBox("Etes-vous certain de vouloir quitter ? Votre partie sera perdue", vbOKCancel, "Attention") = vbOK Then
-            accueil.Show()
-        End If
     End Sub
 
     Private Sub Btn_Clicked(sender As Object, e As EventArgs)
@@ -82,9 +94,60 @@ Public Class jeu
         End If
     End Sub
     Private Sub Partie_Gagnee()
-        MsgBox("finito")
+        Timer1.Stop()
+        Enabled = False
+        MsgBox("Vous avez gagné. Bravo !", vbOKOnly, "Fin de la partie")
+        Close()
+        accueil.Show()
     End Sub
     Private Sub Partie_Perdue()
-        MsgBox("BOUM")
+        Timer1.Stop()
+        Enabled = False
+        MsgBox("Vous avez perdu.", vbOKOnly, "Fin de la partie")
+        Close()
+        accueil.Show()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Timer1.Stop()
+        Enabled = False
+        If MsgBox("Vous êtes sur le point de perdre votre partie.", vbOKCancel, "Attention") = vbOK Then
+            Close()
+            accueil.Visible = True
+        Else
+            Timer1.Start()
+            Enabled = True
+        End If
+    End Sub
+
+    Private Sub jeu_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        If reglages.getTimerActif Then
+            stockJoueur.updateAvecTemps((reglages.getNbLigne * reglages.getNbColonne - reglages.getNbBombe) - cptCase, reglages.getTemps - Label1.Text \ 60)
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        PictureBox3.Visible = False
+        PictureBox2.Visible = True
+        tlp.Enabled = False
+        Label1.Enabled = False
+        PictureBox1.Enabled = False
+        Drapeau.Enabled = False
+
+        Timer1.Stop()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        PictureBox2.Visible = False
+        PictureBox3.Visible = True
+        tlp.Enabled = True
+        Label1.Enabled = True
+        PictureBox1.Enabled = True
+        Drapeau.Enabled = True
+        Timer1.Start()
     End Sub
 End Class

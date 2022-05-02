@@ -33,10 +33,16 @@ Public Class accueil
             Label4.Visible = True
             ComboBox1.Focus()
         Else
-            stockJoueur.enregistrementJoueur(ComboBox1.Text, 0, 0, 0, 0)
-            Hide()
-            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Black, Color.Blue, Color.Black, Color.Green))
-            jeu.Show()
+            If verifJoueur(ComboBox1.Text) Then
+                Hide()
+                jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Black, Color.Blue, Color.Black, Color.Green))
+                jeu.Show()
+            Else
+                stockJoueur.enregistrementJoueur(ComboBox1.Text, 0, 0, 0, 0)
+                Hide()
+                jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Black, Color.Blue, Color.Black, Color.Green))
+                jeu.Show()
+            End If
         End If
     End Sub
 
@@ -72,11 +78,14 @@ Public Class accueil
     End Sub
 
     Private Sub accueil_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        fin(reglages.getPath)
+        If (reglages.verifFichier()) Then
+            fin(reglages.getPath)
+        End If
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Enabled = False
+        Me.Enabled = False
         scores.Show()
     End Sub
 

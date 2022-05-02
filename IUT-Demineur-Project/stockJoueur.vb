@@ -34,6 +34,8 @@
     End Sub
 
     Public Sub refreshList()
+        scores.ListBox1.Items.Clear()
+        tab.Sort(New JoueurComparer())
         For Each j In tab
             scores.ListBox1.Items.Add(j.getNom() & " : meilleur nombre de cases révélées : " & j.getNbCasePerf & " (" & j.getTempsPerf & " minutes)")
             scores.ComboBox1.Items.Add(j.getNom())
@@ -55,6 +57,19 @@
             End If
         Next
         Return False
+    End Function
+
+    Public Function updateAvecTemps(nbCaseDecouverte As Integer, temps As Integer)
+        Dim j As Joueur = getJoueur(accueil.ComboBox1.Text)
+        j.setTempsJoue(j.getTempsJoue + temps)
+        j.setPartieJouee(j.getPartieJouee + 1)
+        If j.getNbCasePerf < nbCaseDecouverte Then
+            j.setNbCasePerf(nbCaseDecouverte)
+            j.setTempsPerf(temps)
+        ElseIf j.getNbCasePerf = nbCaseDecouverte And temps < j.getTempsPerf Then
+            j.setNbCasePerf(nbCaseDecouverte)
+            j.setTempsPerf(temps)
+        End If
     End Function
 
 End Module

@@ -2,7 +2,9 @@
 
     Private Sub scores_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
         stockJoueur.refreshList()
-        ListBox1.SelectedIndex = 0
+        If ListBox1.Items.Count <> 0 Then
+            ListBox1.SelectedIndex = 0
+        End If
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -11,8 +13,8 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Hide()
         accueil.Enabled = True
+        Hide()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -37,4 +39,7 @@
         End If
     End Sub
 
+    Private Sub scores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

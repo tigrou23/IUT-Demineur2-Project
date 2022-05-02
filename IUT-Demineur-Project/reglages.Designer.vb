@@ -22,6 +22,7 @@ Partial Class reglages
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reglages))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -290,6 +291,7 @@ Partial Class reglages
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.HScrollBar1)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "reglages"
         Me.Text = "reglages"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
