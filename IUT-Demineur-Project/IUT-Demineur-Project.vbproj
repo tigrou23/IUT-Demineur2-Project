@@ -81,10 +81,7 @@
     </Compile>
     <Compile Include="Box.vb" />
     <Compile Include="Donnees.vb" />
-    <Compile Include="Grille.vb" />
-    <Compile Include="jeu.Designer.vb">
-      <DependentUpon>jeu.vb</DependentUpon>
-    </Compile>
+    <Compile Include="jeu.Designer.vb" />
     <Compile Include="jeu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +122,7 @@
     <EmbeddedResource Include="accueil.resx">
       <DependentUpon>accueil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="jeu.resx">
-      <DependentUpon>jeu.vb</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="jeu.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

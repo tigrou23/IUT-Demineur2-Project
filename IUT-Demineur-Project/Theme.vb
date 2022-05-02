@@ -1,24 +1,22 @@
 ﻿Public Class Theme
-    Private couleur_Fo_Case, couleur_Bd_Case, couleur_Fo_Form, couleur_Ec_Form As Color
-    'Fo : Fore
-    'Ba : Border
-    'Ec : Ecriture
-    Public Sub New(cFc As Color, cBc As Color, cFf As Color, cEc As Color)
-        couleur_Fo_Case = cFc
-        couleur_Bd_Case = cBc
-        couleur_Fo_Form = cFf
-        couleur_Ec_Form = cEc
+    Private backColor_Box, borderColor_Box, fontColor, flagColor As Color
+
+    Public Sub New(backC_b As Color, borderC_b As Color, fontC As Color, flagC As Color)
+        backColor_Box = backC_b
+        borderColor_Box = borderC_b
+        fontColor = fontC
+        flagColor = flagC
     End Sub
-    Public Function get_couleur_Fo_Case()
-        Return couleur_Fo_Case
+    Public Function get_backColor_Box()
+        Return backColor_Box
     End Function
-    Public Function get_couleur_Bd_Case()
-        Return couleur_Bd_Case
+    Public Function get_borderColor_Box()
+        Return borderColor_Box
     End Function
-    Public Function get_couleur_Fo_Form()
-        Return couleur_Fo_Form
+    Public Function get_fontColor()
+        Return fontColor
     End Function
-    Public Function get_couleur_Ec_Form()
-        Return couleur_Ec_Form
+    Public Function get_flagColor()
+        Return flagColor
     End Function
 End Class

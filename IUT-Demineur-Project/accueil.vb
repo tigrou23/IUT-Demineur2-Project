@@ -23,7 +23,7 @@ Public Class accueil
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If ComboBox1.SelectedItem <> "" Then
             Hide()
-            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.Gray, Color.Black))
+            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Black, Color.Blue, Color.Black, Color.Green))
             jeu.Show()
         ElseIf ComboBox1.Text.Length = 0 Then
             Label2.Visible = True
@@ -35,7 +35,7 @@ Public Class accueil
         Else
             stockJoueur.enregistrementJoueur(ComboBox1.Text, 0, 0, 0, 0)
             Hide()
-            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Blue, Color.Red, Color.Gray, Color.Black))
+            jeu.init(reglages.getNbLigne, reglages.getNbColonne, reglages.getPath, reglages.getNbBombe, reglages.getTemps, New Theme(Color.Black, Color.Blue, Color.Black, Color.Green))
             jeu.Show()
         End If
     End Sub

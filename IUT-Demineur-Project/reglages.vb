@@ -5,7 +5,6 @@
     Private Const nbMax As Integer = 16
     Private Const nbColonneDefaut As Integer = 8
     Private Const tempsDefaut As Integer = 1
-    Private Const nbBombeMax As Integer = 50
     Private Const nbBombeDefaut As Integer = 10
 
     Private ChangePath As Boolean = False
@@ -57,7 +56,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         accueil.Enabled = False
-        For i = 1 To nbBombeMax
+        For i = 1 To nbColonneDefaut * nbLigneDefaut - 9
             ListBox1.Items.Add(i & " bombes")
         Next
         ListBox1.SelectedIndex = nbBombeDefaut - 1
@@ -82,10 +81,16 @@
         Label8.Text = HScrollBar1.Value
         nbCase = HScrollBar1.Value * HScrollBar2.Value
         ListBox1.Items.Clear()
-        For i = 1 To nbCase / 2
+        Dim maxBomb As Integer
+        If nbCase > 9 Then
+            maxBomb = nbCase - 9
+        Else
+            maxBomb = nbCase \ 2
+        End If
+        For i = 1 To maxBomb
             ListBox1.Items.Add(i & " bombes")
         Next
-        ListBox1.SelectedIndex = (nbCase / 2) / 2 - 1
+        ListBox1.SelectedIndex = maxBomb \ 2
     End Sub
 
     Private Sub HScrollBar2_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar2.Scroll
@@ -93,10 +98,16 @@
         Label4.Text = HScrollBar2.Value
         nbCase = HScrollBar1.Value * HScrollBar2.Value
         ListBox1.Items.Clear()
-        For i = 1 To nbCase / 2
+        Dim maxBomb As Integer
+        If nbCase > 9 Then
+            maxBomb = nbCase - 9
+        Else
+            maxBomb = nbCase \ 2
+        End If
+        For i = 1 To maxBomb
             ListBox1.Items.Add(i & " bombes")
         Next
-        ListBox1.SelectedIndex = (nbCase / 2) / 2 - 1
+        ListBox1.SelectedIndex = maxBomb \ 2
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
