@@ -23,44 +23,72 @@ Partial Class jeu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.tlp = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Drapeau = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tlp
         '
+        Me.tlp.AccessibleRole = System.Windows.Forms.AccessibleRole.Table
+        Me.tlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.tlp.BackColor = System.Drawing.Color.Gray
         Me.tlp.ColumnCount = 2
-        Me.tlp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlp.Location = New System.Drawing.Point(12, 40)
+        Me.tlp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.tlp.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.tlp.Location = New System.Drawing.Point(0, 100)
+        Me.tlp.Margin = New System.Windows.Forms.Padding(0, 100, 0, 0)
         Me.tlp.Name = "tlp"
         Me.tlp.RowCount = 2
-        Me.tlp.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlp.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tlp.Size = New System.Drawing.Size(214, 164)
+        Me.tlp.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlp.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlp.Size = New System.Drawing.Size(217, 97)
         Me.tlp.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.Controls.Add(Me.Drapeau)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(961, 100)
+        Me.Panel1.TabIndex = 3
         '
         'Drapeau
         '
-        Me.Drapeau.Location = New System.Drawing.Point(12, 11)
+        Me.Drapeau.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Drapeau.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Drapeau.Enabled = False
+        Me.Drapeau.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Drapeau.Location = New System.Drawing.Point(847, 14)
+        Me.Drapeau.Margin = New System.Windows.Forms.Padding(10)
         Me.Drapeau.Name = "Drapeau"
-        Me.Drapeau.Size = New System.Drawing.Size(75, 23)
-        Me.Drapeau.TabIndex = 0
+        Me.Drapeau.Size = New System.Drawing.Size(98, 71)
+        Me.Drapeau.TabIndex = 3
         Me.Drapeau.Text = "Drapeau"
         Me.Drapeau.UseVisualStyleBackColor = True
         '
         'jeu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(238, 216)
-        Me.Controls.Add(Me.Drapeau)
+        Me.AutoScroll = True
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(961, 764)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tlp)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "jeu"
         Me.Text = "jeu"
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents tlp As TableLayoutPanel
+    Friend WithEvents Panel1 As Panel
     Friend WithEvents Drapeau As Button
 End Class
