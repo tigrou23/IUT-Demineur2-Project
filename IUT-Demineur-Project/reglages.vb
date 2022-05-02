@@ -1,11 +1,12 @@
 ﻿Public Class reglages
 
     Private Const nbLigneDefaut As Integer = 8
-    Private Const nbMin As Integer = 2
+    Private Const nbMin As Integer = 3
     Private Const nbMax As Integer = 16
     Private Const nbColonneDefaut As Integer = 8
     Private Const tempsDefaut As Integer = 1
     Private Const nbBombeDefaut As Integer = 10
+    Private Const nbBombeMax As Integer = 100
 
     Private ChangePath As Boolean = False
     Private nbLigne As Integer
@@ -57,7 +58,9 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         accueil.Enabled = False
         For i = 1 To nbColonneDefaut * nbLigneDefaut - 9
-            ListBox1.Items.Add(i & " bombes")
+            If i < nbBombeMax Then
+                ListBox1.Items.Add(i & " bombes")
+            End If
         Next
         ListBox1.SelectedIndex = nbBombeDefaut - 1
         TextBox1.Text = Application.StartupPath & "\config.txt"
@@ -88,9 +91,11 @@
             maxBomb = nbCase \ 2
         End If
         For i = 1 To maxBomb
-            ListBox1.Items.Add(i & " bombes")
+            If i < nbBombeMax Then
+                ListBox1.Items.Add(i & " bombes")
+            End If
         Next
-        ListBox1.SelectedIndex = maxBomb \ 2
+        ListBox1.SelectedIndex = 0
     End Sub
 
     Private Sub HScrollBar2_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar2.Scroll
@@ -105,9 +110,11 @@
             maxBomb = nbCase \ 2
         End If
         For i = 1 To maxBomb
-            ListBox1.Items.Add(i & " bombes")
+            If i < nbBombeMax Then
+                ListBox1.Items.Add(i & " bombes")
+            End If
         Next
-        ListBox1.SelectedIndex = maxBomb \ 2
+        ListBox1.SelectedIndex = 0
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
