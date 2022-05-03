@@ -150,4 +150,23 @@ Public Class jeu
         Drapeau.Enabled = True
         Timer1.Start()
     End Sub
+
+    Private Sub Drapeau_Click(sender As Object, e As EventArgs) Handles Drapeau.Click
+        If flag Then
+            flag = False
+            Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_backColor_Box()
+            For Each btn As Control In tlp.Controls
+                AddHandler btn.Click, AddressOf Btn_Clicked
+            Next
+        Else
+            flag = True
+            Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_flagColor()
+            For Each btn As Control In tlp.Controls
+                RemoveHandler btn.Click, AddressOf Btn_Clicked
+            Next
+            For Each btn As Control In tlp.Controls
+                AddHandler btn.Click, AddressOf Flag_Click
+            Next
+        End If
+    End Sub
 End Class
