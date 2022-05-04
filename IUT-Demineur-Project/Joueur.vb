@@ -2,7 +2,7 @@
 
     Private nom As String
     Private nbCasePerf As Integer
-    Private tempsPerf
+    Private tempsPerf As Integer
     Private partieJouee As Integer
     Private tempsJoue As Integer
 
