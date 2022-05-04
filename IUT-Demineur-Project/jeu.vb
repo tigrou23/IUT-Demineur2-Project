@@ -195,7 +195,7 @@ Public Class jeu
     End Sub
 
     Protected Overrides Function ProcessCmdKey(ByRef msg As Message, ByVal keyData As Keys) As Boolean
-        Dim coordonnees, l, c As Integer
+        Dim coordonnees As Integer
         If keyData = Keys.Up Or keyData = Keys.Down Or keyData = Keys.Right Or keyData = Keys.Left Then
             For Each ctr As Control In tlp.Controls
                 If TypeOf ctr Is Button And ctr.Focused = True Then
