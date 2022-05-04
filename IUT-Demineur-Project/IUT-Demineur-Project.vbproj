@@ -119,6 +119,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Theme.vb" />
+    <Compile Include="themes.Designer.vb">
+      <DependentUpon>themes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="themes.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="accueil.resx">
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="scores.resx">
       <DependentUpon>scores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themes.resx">
+      <DependentUpon>themes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

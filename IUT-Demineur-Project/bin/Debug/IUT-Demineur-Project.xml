@@ -62,6 +62,21 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.themecontraste">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.themesombre">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.thmeclair">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.tri">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.

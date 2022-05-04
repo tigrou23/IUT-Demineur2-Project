@@ -76,7 +76,6 @@
         path = Application.StartupPath & "\config.txt"
         temps = tempsDefaut
         nbBombe = nbBombeDefaut
-        CheckBox1.CheckState = CheckState.Checked
     End Sub
 
     Private Sub HScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles HScrollBar1.Scroll
@@ -133,6 +132,7 @@
         Label8.Text = HScrollBar1.Value
         Label4.Text = HScrollBar2.Value
         CheckBox1.CheckState = CheckState.Checked
+        themes.RadioButton1.Checked = True
     End Sub
 
     Private Sub reglages_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
@@ -218,8 +218,13 @@
         If MsgBox("Aucun changement ne sera enregistré", vbOKCancel, "Attention") = vbOK Then
             Hide()
             accueil.Enabled = True
+            themes.RadioButton1.Checked = True
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Enabled = False
+        themes.Show()
+    End Sub
 End Class
 
