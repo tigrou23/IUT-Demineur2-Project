@@ -44,3 +44,4 @@ C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Deb
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.scores.resources
 C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.scores.resources
 C:\Users\hugo0\Desktop\IUT-Demineur2-Project\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.themes.resources
+C:\Users\feflb\Documents\IUT\Saé demineur - Github\IUT-Demineur-Project\obj\Debug\IUT_Demineur_Project.themes.resources

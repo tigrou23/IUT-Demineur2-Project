@@ -67,7 +67,7 @@ Public Class jeu
             If affichageText(tlp.GetRow(sender), tlp.GetColumn(sender)).Text = "" Then
                 Donnees.caseVide(tlp.GetRow(sender), tlp.GetColumn(sender))
                 For Each l As Integer In Donnees.get_ListeVide
-                    Dim numero As Control = tlp.Controls.Item((l Mod Donnees.get_Colonne) * Donnees.get_Colonne + (l \ Donnees.get_Colonne))
+                    Dim numero As Control = tlp.Controls.Item((l Mod Donnees.get_Colonne) * Donnees.get_Ligne + (l \ Donnees.get_Colonne))
                     numero.Visible = False
                     tlp.Controls.Add(Donnees.affichageText(tlp.GetRow(numero), tlp.GetColumn(numero)), tlp.GetColumn(numero), tlp.GetRow(numero))
                     cptCase -= 1
