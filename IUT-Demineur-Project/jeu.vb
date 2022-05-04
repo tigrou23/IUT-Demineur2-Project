@@ -62,6 +62,7 @@ Public Class jeu
         For Each btn As Control In tlp.Controls
             If TypeOf btn Is Button Then
                 AddHandler btn.Click, AddressOf Btn_Clicked
+                AddHandler btn.MouseDown, AddressOf Click_Droit
             End If
         Next
     End Sub
@@ -97,6 +98,11 @@ Public Class jeu
             Else
                 sender.BackColor = Donnees.get_Theme().get_backColor_Box()
             End If
+        End If
+    End Sub
+    Private Sub Click_Droit(sender As Object, e As MouseEventArgs)
+        If e.Button = MouseButtons.Right Then
+            Flag_Click(sender, e)
         End If
     End Sub
     Private Sub Partie_Gagnee()
