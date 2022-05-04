@@ -106,6 +106,18 @@
         grille(ligne)(Colonne).set_Etat(Box.Etat.Connu)
         Return affichageText(ligne, Colonne)
     End Function
+    Public Function retourne(ligne As Integer, colonne As Integer)
+        Return grille(ligne)(colonne).get_Etat <> Box.Etat.Connu
+    End Function
+    Public Function drapeau(ligne As Integer, colonne As Integer)
+        If grille(ligne)(colonne).get_Etat = Box.Etat.Drapeau Then
+            grille(ligne)(colonne).set_Etat(Box.Etat.Inconnu)
+            Return False
+        Else
+            grille(ligne)(colonne).set_Etat(Box.Etat.Drapeau)
+            Return True
+        End If
+    End Function
     Public Function get_Ligne()
         Return nbLignes
     End Function

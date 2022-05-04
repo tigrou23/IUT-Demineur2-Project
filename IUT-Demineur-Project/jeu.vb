@@ -29,7 +29,9 @@ Public Class jeu
         Me.Controls.Add(tlp)
         tlp.ResumeLayout()
         For Each btn As Control In tlp.Controls
-            AddHandler btn.Click, AddressOf First_Click
+            If TypeOf btn Is Button Then
+                AddHandler btn.Click, AddressOf First_Click
+            End If
         Next
         afficheHeure(sender, e)
     End Sub
@@ -50,13 +52,17 @@ Public Class jeu
         Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_backColor_Box()
         flag = False
         For Each btn As Control In tlp.Controls
-            RemoveHandler btn.Click, AddressOf First_Click
+            If TypeOf btn Is Button Then
+                RemoveHandler btn.Click, AddressOf First_Click
+            End If
         Next
         placementBombes(tlp.GetRow(sender), tlp.GetColumn(sender))
         placementNombres()
         Btn_Clicked(sender, e)
         For Each btn As Control In tlp.Controls
-            AddHandler btn.Click, AddressOf Btn_Clicked
+            If TypeOf btn Is Button Then
+                AddHandler btn.Click, AddressOf Btn_Clicked
+            End If
         Next
     End Sub
 
@@ -85,11 +91,11 @@ Public Class jeu
         End If
     End Sub
     Private Sub Flag_Click(sender As Object, e As EventArgs)
-        If sender.BackColor = Donnees.get_Theme().get_flagColor() Then
-            sender.BackColor = Donnees.get_Theme().get_backColor_Box()
-        Else
-            If TypeOf sender Is System.Windows.Forms.Button Then
+        If Donnees.retourne(tlp.GetRow(sender), tlp.GetColumn(sender)) Then
+            If Donnees.drapeau(tlp.GetRow(sender), tlp.GetColumn(sender)) Then
                 sender.BackColor = Donnees.get_Theme().get_flagColor()
+            Else
+                sender.BackColor = Donnees.get_Theme().get_backColor_Box()
             End If
         End If
     End Sub
@@ -157,16 +163,27 @@ Public Class jeu
             flag = False
             Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_backColor_Box()
             For Each btn As Control In tlp.Controls
-                AddHandler btn.Click, AddressOf Btn_Clicked
+                If TypeOf btn Is Button Then
+                    RemoveHandler btn.Click, AddressOf Flag_Click
+                End If
+            Next
+            For Each btn As Control In tlp.Controls
+                If TypeOf btn Is Button Then
+                    AddHandler btn.Click, AddressOf Btn_Clicked
+                End If
             Next
         Else
             flag = True
             Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_flagColor()
             For Each btn As Control In tlp.Controls
-                RemoveHandler btn.Click, AddressOf Btn_Clicked
+                If TypeOf btn Is Button Then
+                    RemoveHandler btn.Click, AddressOf Btn_Clicked
+                End If
             Next
             For Each btn As Control In tlp.Controls
-                AddHandler btn.Click, AddressOf Flag_Click
+                If TypeOf btn Is Button Then
+                    AddHandler btn.Click, AddressOf Flag_Click
+                End If
             Next
         End If
     End Sub
