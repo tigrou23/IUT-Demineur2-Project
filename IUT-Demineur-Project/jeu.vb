@@ -193,4 +193,20 @@ Public Class jeu
             Next
         End If
     End Sub
+
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, ByVal keyData As Keys) As Boolean
+        Dim coordonnees, l, c As Integer
+        If keyData = Keys.Up Or keyData = Keys.Down Or keyData = Keys.Right Or keyData = Keys.Left Then
+            For Each ctr As Control In tlp.Controls
+                If TypeOf ctr Is Button And ctr.Focused = True Then
+                    coordonnees = Donnees.Next_Box(tlp.GetRow(ctr), tlp.GetColumn(ctr), keyData)
+                    Dim numero As Button = tlp.Controls.Item((coordonnees Mod Donnees.get_Colonne) * Donnees.get_Ligne + (coordonnees \ Donnees.get_Colonne))
+                    numero.Focus()
+                    Return True
+                End If
+            Next
+        End If
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+
 End Class

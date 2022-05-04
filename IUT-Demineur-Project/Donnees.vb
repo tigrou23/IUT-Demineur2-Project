@@ -146,4 +146,43 @@
     Public Sub clear_ListVide()
         listeVide.Clear()
     End Sub
+    Public Function Next_Box(ligne As Integer, colonne As Integer, orientation As Keys)
+        Dim locLigne As Integer = ligne
+        Dim locColonne As Integer = colonne
+        Dim i As Integer = 1
+        If orientation = Keys.Up Then
+            Do
+                If locLigne - i >= 0 Then
+                    locLigne -= i
+                Else
+                    Exit Do
+                End If
+            Loop Until grille(locLigne)(locColonne).get_Etat = Box.Etat.Inconnu
+        ElseIf orientation = Keys.Right Then
+            Do
+                If locColonne + i <= nbColonnes - 1 Then
+                    locColonne += i
+                Else
+                    Exit Do
+                End If
+            Loop Until grille(locLigne)(locColonne).get_Etat = Box.Etat.Inconnu
+        ElseIf orientation = Keys.Down Then
+            Do
+                If locLigne + i <= nbLignes - 1 Then
+                    locLigne += i
+                Else
+                    Exit Do
+                End If
+            Loop Until grille(locLigne)(locColonne).get_Etat = Box.Etat.Inconnu
+        Else
+            Do
+                If locColonne - i >= 0 Then
+                    locColonne -= i
+                Else
+                    Exit Do
+                End If
+            Loop Until grille(locLigne)(locColonne).get_Etat = Box.Etat.Inconnu
+        End If
+        Return locLigne * nbColonnes + locColonne
+    End Function
 End Module
