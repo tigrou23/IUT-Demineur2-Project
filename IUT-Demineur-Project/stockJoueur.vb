@@ -48,6 +48,7 @@
                 Return j
             End If
         Next
+        Return Nothing
     End Function
 
     Public Function verifJoueur(nom As String) As Boolean
@@ -59,7 +60,7 @@
         Return False
     End Function
 
-    Public Function updateAvecTemps(nbCaseDecouverte As Integer, temps As Integer)
+    Public Sub updateAvecTemps(nbCaseDecouverte As Integer, temps As Integer)
         Dim j As Joueur = getJoueur(accueil.ComboBox1.Text)
         j.setTempsJoue(j.getTempsJoue + temps)
         j.setPartieJouee(j.getPartieJouee + 1)
@@ -70,6 +71,6 @@
             j.setNbCasePerf(nbCaseDecouverte)
             j.setTempsPerf(temps)
         End If
-    End Function
+    End Sub
 
 End Module

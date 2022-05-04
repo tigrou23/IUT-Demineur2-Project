@@ -179,9 +179,9 @@
         Return ChangePath
     End Function
 
-    Public Function Change()
+    Public Sub Change()
         ChangePath = False
-    End Function
+    End Sub
 
     Public Function getTimerActif() As Boolean
         If timerActif Then
