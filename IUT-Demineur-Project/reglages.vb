@@ -1,7 +1,7 @@
 ﻿Public Class reglages
 
     Private Const nbLigneDefaut As Integer = 8
-    Private Const nbMin As Integer = 3
+    Private Const nbMin As Integer = 5
     Private Const nbMax As Integer = 16
     Private Const nbColonneDefaut As Integer = 8
     Private Const tempsDefaut As Integer = 1

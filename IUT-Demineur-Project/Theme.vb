@@ -1,4 +1,5 @@
 ﻿Public Class Theme
+
     Private backColor_Box, borderColor_Box, fontColor, flagColor As Color
 
     Public Sub New(backC_b As Color, borderC_b As Color, fontC As Color, flagC As Color)

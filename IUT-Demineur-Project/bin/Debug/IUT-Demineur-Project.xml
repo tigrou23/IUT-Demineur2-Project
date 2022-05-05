@@ -27,12 +27,27 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.espagne">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.fleche">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.france">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.lock">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.original">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -43,6 +58,16 @@ IUT-Demineur-Project
 </summary>
 </member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.play">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.pologne">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.portugal">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -82,7 +107,17 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.ukraine">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.unlock">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.vietnam">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
