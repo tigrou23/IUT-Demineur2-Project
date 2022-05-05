@@ -138,8 +138,8 @@ Public Class jeu
 
     Private Sub jeu_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If reglages.getTimerActif Then
-            stockJoueur.updateAvecTemps((reglages.getNbLigne * reglages.getNbColonne - reglages.getNbBombe) - cptCase, reglages.getTemps - Label1.Text \ 60)
-            MsgBox("Vous avez dévoilé " & (reglages.getNbLigne * reglages.getNbColonne - reglages.getNbBombe) - cptCase & " case(s) en " & reglages.getTemps - Label1.Text \ 60 & " minutes.", vbOKOnly, "Informations")
+            stockJoueur.updateAvecTemps((reglages.getNbLigne * reglages.getNbColonne - reglages.getNbBombe) - cptCase, reglages.getTemps * 60 - Label1.Text)
+            MsgBox("Vous avez dévoilé " & (reglages.getNbLigne * reglages.getNbColonne - reglages.getNbBombe) - cptCase & " case(s) en " & (reglages.getTemps * 60 - Label1.Text) \ 60 & " minute(s) et " & (reglages.getTemps * 60 - Label1.Text) Mod 60 & " seconde(s).", vbOKOnly, "Informations")
         End If
     End Sub
 

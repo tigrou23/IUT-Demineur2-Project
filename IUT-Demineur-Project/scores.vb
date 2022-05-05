@@ -33,7 +33,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim j As Joueur = stockJoueur.getJoueur(ComboBox1.Text)
         If stockJoueur.verifJoueur(ComboBox1.Text) Then
-            MsgBox("Nom : " & j.getNom & vbCrLf & "Meilleur nombre de cases révélées : " & j.getNbCasePerf & vbCrLf & "Temps de cette performance : " & j.getTempsPerf & " minutes" & vbCrLf & "Nombre de parties jouées : " & j.getPartieJouee & vbCrLf & "Nombre de minutes en partie : " & j.getTempsJoue & vbCrLf, vbOKOnly, "Statistiques du joueur")
+            MsgBox("Nom : " & j.getNom & vbCrLf & "Meilleur nombre de cases révélées : " & j.getNbCasePerf & vbCrLf & "Temps de cette performance : " & j.getTempsPerf \ 60 & " minute(s) et " & j.getTempsPerf Mod 60 & " seconde(s)" & vbCrLf & "Nombre de parties jouées : " & j.getPartieJouee & vbCrLf & "Nombre de minutes en partie : " & j.getTempsJoue \ 60 & vbCrLf, vbOKOnly, "Statistiques du joueur")
         Else
             MsgBox("Le joueur n'est pas enregistré.", vbOKOnly, "Attention")
         End If
