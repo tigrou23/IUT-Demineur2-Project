@@ -5,15 +5,16 @@
     Public btn As Button
     Public lbl As Label
 
-    Public Sub New(backColor_Box As Color, borderColor_Box As Color, fontColor As Color)
+    Public Sub New(taille As Integer, backColor_Box As Color, borderColor_Box As Color, fontColor As Color)
         btn = New Button
-        btn.Size = New Size(50, 50)
+        taille = 50 - (5) * (taille \ 10)
+        btn.Size = New Size(taille, taille)
         btn.BackColor = backColor_Box
         btn.FlatStyle = FlatStyle.Flat
         btn.FlatAppearance.BorderColor = borderColor_Box
         btn.FlatAppearance.BorderSize = 2
         lbl = New Label
-        lbl.Size = New Size(50, 50)
+        lbl.Size = New Size(taille, taille)
         lbl.ForeColor = fontColor
         lbl.Text = ""
         lbl.TextAlign = ContentAlignment.MiddleCenter

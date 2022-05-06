@@ -16,12 +16,16 @@
         placementBombe = New Integer(nbBombe - 1) {}
         listeVide = New ArrayList
         grille = New Box(nbLignes - 1)() {}
+        Dim taille As Integer = nbLignes
+        If nbColonnes > nbLignes Then
+            taille = nbColonnes
+        End If
         For i As Integer = 0 To nbLignes - 1
             grille(i) = New Box(nbColonnes - 1) {}
         Next
         For i As Integer = 0 To nbLignes - 1
             For j As Integer = 0 To nbColonnes - 1
-                grille(i)(j) = New Box(theme.get_backColor_Box, theme.get_borderColor_Box, theme.get_fontColor)
+                grille(i)(j) = New Box(taille, theme.get_backColor_Box, theme.get_borderColor_Box, theme.get_fontColor)
             Next
         Next
     End Sub
@@ -29,7 +33,7 @@
     Public Sub placementBombes(ligne As Integer, colonne As Integer)
         Dim locLigne As Integer, locColonne As Integer
         Dim l1 As Integer, l2 As Integer, c1 As Integer, c2 As Integer
-        If nbColonnes > 7 And nbLignes > 7 Then
+        If nbColonnes > 7 Or nbLignes > 7 Then
             l1 = ligne - 1
             l2 = ligne + 1
             c1 = colonne - 1
