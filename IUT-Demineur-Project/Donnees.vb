@@ -46,7 +46,7 @@
         End If
         For i As Integer = 0 To nbBombe - 1
             Do
-                locLigne = CInt(Int(nbColonnes * Rnd()))
+                locLigne = CInt(Int(nbLignes * Rnd()))
                 locColonne = CInt(Int(nbColonnes * Rnd()))
             Loop Until grille(locLigne)(locColonne).get_Valeur <> Box.Valeur.Bomb And (locLigne <> ligne And locColonne <> colonne) And
                 (locLigne <> l1 And locColonne <> c1) And
