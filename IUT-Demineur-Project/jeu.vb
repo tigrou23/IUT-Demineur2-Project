@@ -49,6 +49,7 @@ Public Class jeu
     Private Sub First_Click(sender As Object, e As EventArgs)
         Timer1.Start()
         Drapeau.Enabled = True
+        Aide.Enabled = True
         Drapeau.FlatStyle = FlatStyle.Flat
         Drapeau.FlatAppearance.BorderColor = Donnees.get_Theme().get_backColor_Box()
         flag = False
@@ -210,4 +211,20 @@ Public Class jeu
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Aide.Click
+        Dim coordonnees_Drapeau As Integer = Donnees.Marque_Drapeau()
+        Dim btn As Button
+        If coordonnees_Drapeau > -1 Then
+            btn = tlp.Controls.Item((coordonnees_Drapeau Mod Donnees.get_Colonne) * Donnees.get_Ligne + (coordonnees_Drapeau \ Donnees.get_Colonne))
+            btn.BackColor = Donnees.get_Theme().get_flagColor()
+        Else
+            Dim coordonnees_Demasque As Integer = Donnees.Demasque()
+            If coordonnees_Demasque > -1 Then
+                btn = tlp.Controls.Item((coordonnees_Demasque Mod Donnees.get_Colonne) * Donnees.get_Ligne + (coordonnees_Demasque \ Donnees.get_Colonne))
+                Btn_Clicked(btn, e)
+            Else
+                MsgBox("Miskine t'es kéblo")
+            End If
+        End If
+    End Sub
 End Class

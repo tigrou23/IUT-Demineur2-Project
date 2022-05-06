@@ -189,4 +189,73 @@
         End If
         Return locLigne * nbColonnes + locColonne
     End Function
+    Public Function Demasque()
+        For l As Integer = 0 To nbLignes - 1
+            For c As Integer = 0 To nbColonnes - 1
+                Dim cpt As Integer = 0
+                If grille(l)(c).get_Etat = Box.Etat.Connu And grille(l)(c).get_Valeur = Box.Valeur.Nombre Then
+                    For i As Integer = -1 To 1
+                        For j As Integer = -1 To 1
+                            If (i + l >= 0) And (j + c >= 0) And (i + l <= nbLignes - 1) And (j + c <= nbColonnes - 1) Then
+                                If grille(l + i)(j + c).get_Etat = Box.Etat.Drapeau Then
+                                    cpt += 1
+                                End If
+                            End If
+                        Next
+                    Next
+                    If CInt(grille(l)(c).get_Label.Text) = cpt Then
+                        For i As Integer = -1 To 1
+                            For j As Integer = -1 To 1
+                                If (i + l >= 0) And (j + c >= 0) And (i + l <= nbLignes - 1) And (j + c <= nbColonnes - 1) Then
+                                    If grille(l + i)(c + j).get_Etat = Box.Etat.Inconnu Then
+                                        grille(l + i)(c + j).set_Etat(Box.Etat.Connu)
+                                        Return (l + i) * nbColonnes + (c + j)
+                                    End If
+                                End If
+                            Next
+                        Next
+                    End If
+                End If
+            Next
+        Next
+        Return -1
+    End Function
+    Public Function Etat_Box(ligne As Integer, colonne As Integer)
+        Return grille(ligne)(colonne).get_Etat
+    End Function
+    Public Function Marque_Drapeau()
+        For l As Integer = 0 To nbLignes - 1
+            For c As Integer = 0 To nbColonnes - 1
+                Dim cpt As Integer = 0
+                Dim tmp As Integer = 0
+                If grille(l)(c).get_Etat = Box.Etat.Connu And grille(l)(c).get_Valeur = Box.Valeur.Nombre Then
+                    For i As Integer = -1 To 1
+                        For j As Integer = -1 To 1
+                            If (i + l >= 0) And (j + c >= 0) And (i + l <= nbLignes - 1) And (j + c <= nbColonnes - 1) Then
+                                If grille(l + i)(j + c).get_Etat <> Box.Etat.Connu Then
+                                    If grille(l + i)(j + c).get_Etat = Box.Etat.Drapeau Then
+                                        tmp += 1
+                                    End If
+                                    cpt += 1
+                                End If
+                            End If
+                        Next
+                    Next
+                    If CInt(grille(l)(c).get_Label.Text) = cpt And tmp <> cpt Then
+                        For i As Integer = -1 To 1
+                            For j As Integer = -1 To 1
+                                If (i + l >= 0) And (j + c >= 0) And (i + l <= nbLignes - 1) And (j + c <= nbColonnes - 1) Then
+                                    If grille(l + i)(c + j).get_Etat = Box.Etat.Inconnu Then
+                                        grille(l + i)(c + j).set_Etat(Box.Etat.Drapeau)
+                                        Return (l + i) * nbColonnes + (c + j)
+                                    End If
+                                End If
+                            Next
+                        Next
+                    End If
+                End If
+            Next
+        Next
+        Return -1
+    End Function
 End Module
