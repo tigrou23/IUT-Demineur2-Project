@@ -26,22 +26,24 @@ Partial Class jeu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(jeu))
         Me.tlp = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Aide = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Drapeau = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Aide = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tlp
         '
         Me.tlp.AccessibleRole = System.Windows.Forms.AccessibleRole.Table
+        Me.tlp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.tlp.BackColor = System.Drawing.Color.Gray
         Me.tlp.ColumnCount = 2
@@ -71,29 +73,24 @@ Partial Class jeu
         Me.Panel1.Size = New System.Drawing.Size(962, 100)
         Me.Panel1.TabIndex = 3
         '
-        'PictureBox3
+        'Aide
         '
-        Me.PictureBox3.Image = Global.IUT_Demineur_Project.My.Resources.Resources.pause
-        Me.PictureBox3.Location = New System.Drawing.Point(220, 25)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(46, 46)
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.play
-        Me.PictureBox2.Location = New System.Drawing.Point(219, 25)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(46, 49)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        Me.PictureBox2.Visible = False
+        Me.Aide.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Aide.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Aide.Enabled = False
+        Me.Aide.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Aide.Location = New System.Drawing.Point(730, 14)
+        Me.Aide.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
+        Me.Aide.Name = "Aide"
+        Me.Aide.Size = New System.Drawing.Size(98, 71)
+        Me.Aide.TabIndex = 7
+        Me.Aide.Text = "Aide"
+        Me.Aide.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.fleche
         Me.PictureBox1.Location = New System.Drawing.Point(18, 23)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -104,15 +101,16 @@ Partial Class jeu
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(84, 29)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 37)
+        Me.Label1.Size = New System.Drawing.Size(63, 37)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "Lbl"
         '
         'Drapeau
         '
@@ -129,23 +127,30 @@ Partial Class jeu
         Me.Drapeau.Text = "Drapeau"
         Me.Drapeau.UseVisualStyleBackColor = True
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.PictureBox3.Image = Global.IUT_Demineur_Project.My.Resources.Resources.pause
+        Me.PictureBox3.Location = New System.Drawing.Point(155, 25)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(46, 46)
+        Me.PictureBox3.TabIndex = 6
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.play
+        Me.PictureBox2.Location = New System.Drawing.Point(154, 25)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Visible = False
+        '
         'Timer1
         '
-        '
-        'Aide
-        '
-        Me.Aide.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Aide.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Aide.Enabled = False
-        Me.Aide.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Aide.Location = New System.Drawing.Point(730, 14)
-        Me.Aide.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
-        Me.Aide.Name = "Aide"
-        Me.Aide.Size = New System.Drawing.Size(98, 71)
-        Me.Aide.TabIndex = 7
-        Me.Aide.Text = "Aide"
-        Me.Aide.UseVisualStyleBackColor = True
         '
         'jeu
         '
@@ -165,9 +170,9 @@ Partial Class jeu
         Me.Text = "jeu"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
