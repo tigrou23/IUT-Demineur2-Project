@@ -27,9 +27,9 @@
     End Sub
 
     Public Sub placementBombes(ligne As Integer, colonne As Integer)
-        Dim random As New Random(), locLigne As Integer, locColonne As Integer
+        Dim locLigne As Integer, locColonne As Integer
         Dim l1 As Integer, l2 As Integer, c1 As Integer, c2 As Integer
-        If nbColonnes > 3 And nbLignes > 3 Then
+        If nbColonnes > 8 And nbLignes > 8 Then
             l1 = ligne - 1
             l2 = ligne + 1
             c1 = colonne - 1
@@ -42,8 +42,8 @@
         End If
         For i As Integer = 0 To nbBombe - 1
             Do
-                locLigne = random.Next(0, nbLignes)
-                locColonne = random.Next(0, nbColonnes)
+                locLigne = CInt(Int(nbColonnes * Rnd()))
+                locColonne = CInt(Int(nbColonnes * Rnd()))
             Loop Until grille(locLigne)(locColonne).get_Valeur <> Box.Valeur.Bomb And (locLigne <> ligne And locColonne <> colonne) And
                 (locLigne <> l1 And locColonne <> c1) And
                 (locLigne <> l1 And locColonne <> colonne) And
