@@ -29,7 +29,7 @@
     Public Sub placementBombes(ligne As Integer, colonne As Integer)
         Dim locLigne As Integer, locColonne As Integer
         Dim l1 As Integer, l2 As Integer, c1 As Integer, c2 As Integer
-        If nbColonnes > 8 And nbLignes > 8 Then
+        If nbColonnes > 7 And nbLignes > 7 Then
             l1 = ligne - 1
             l2 = ligne + 1
             c1 = colonne - 1
