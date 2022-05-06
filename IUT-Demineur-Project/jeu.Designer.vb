@@ -42,8 +42,6 @@ Partial Class jeu
         'tlp
         '
         Me.tlp.AccessibleRole = System.Windows.Forms.AccessibleRole.Table
-        Me.tlp.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.tlp.BackColor = System.Drawing.Color.Gray
         Me.tlp.ColumnCount = 2
