@@ -31,32 +31,27 @@
     End Sub
 
     Public Sub placementBombes(ligne As Integer, colonne As Integer)
-        Dim locLigne As Integer, locColonne As Integer
+        Dim locLigne, locColonne As Integer
         Dim l1 As Integer, l2 As Integer, c1 As Integer, c2 As Integer
-        If nbColonnes > 7 Or nbLignes > 7 Then
-            l1 = ligne - 1
-            l2 = ligne + 1
-            c1 = colonne - 1
-            c2 = colonne + 1
-        Else
-            l1 = ligne
-            l2 = ligne
-            c1 = colonne
-            c2 = colonne
-        End If
+        Dim random As New Random()
+        l1 = ligne - 1
+        l2 = ligne + 1
+        c1 = colonne - 1
+        c2 = colonne + 1
+
         For i As Integer = 0 To nbBombe - 1
             Do
-                locLigne = CInt(Int(nbLignes * Rnd()))
-                locColonne = CInt(Int(nbColonnes * Rnd()))
+                locLigne = random.Next(0, nbLignes)
+                locColonne = random.Next(0, nbColonnes)
             Loop Until grille(locLigne)(locColonne).get_Valeur <> Box.Valeur.Bomb And (locLigne <> ligne And locColonne <> colonne) And
-                (locLigne <> l1 And locColonne <> c1) And
-                (locLigne <> l1 And locColonne <> colonne) And
-                (locLigne <> l1 And locColonne <> c2) And
-                (locLigne <> ligne And locColonne <> c1) And
-                (locLigne <> ligne And locColonne <> c2) And
-                (locLigne <> l2 And locColonne <> c1) And
-                (locLigne <> l2 And locColonne <> colonne) And
-                (locLigne <> l2 And locColonne <> c2)
+                (locLigne <> l1 Or locColonne <> c1) And
+                (locLigne <> l1 Or locColonne <> colonne) And
+                (locLigne <> l1 Or locColonne <> c2) And
+                (locLigne <> ligne Or locColonne <> c1) And
+                (locLigne <> ligne Or locColonne <> c2) And
+                (locLigne <> l2 Or locColonne <> c1) And
+                (locLigne <> l2 Or locColonne <> colonne) And
+                (locLigne <> l2 Or locColonne <> c2)
             'grille(locLigne)(locColonne).set_Color(Color.Red)
             grille(locLigne)(locColonne).set_Valeur(Box.Valeur.Bomb)
             placementBombe(i) = locLigne * nbColonnes + locColonne

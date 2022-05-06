@@ -10,7 +10,6 @@ Public Class jeu
 
     Private Sub Formulaire_Jeu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = accueil.ComboBox1.Text
-        Randomize()
         Dim th As Theme = Donnees.get_Theme
         If (reglages.getTimerActif) Then
             Label1.Text = Donnees.get_Temps * 60 + 1

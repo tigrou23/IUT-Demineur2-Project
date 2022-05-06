@@ -13,7 +13,7 @@
             theme = New Theme(Color.Blue, Color.Snow, Color.Snow, Color.Red)
         ElseIf RadioButton4.Checked = True Then 'Pologne
             'Vietnam
-            theme = New Theme(Color.Red, Color.Yellow, Color.Snow, Color.Red)
+            theme = New Theme(Color.Red, Color.Yellow, Color.Snow, Color.Yellow)
         ElseIf RadioButton5.Checked = True Then 'Portugal
             'Pologne
             theme = New Theme(Color.White, Color.Red, Color.Snow, Color.Red)
