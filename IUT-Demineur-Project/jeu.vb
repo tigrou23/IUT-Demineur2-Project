@@ -9,6 +9,7 @@ Public Class jeu
     End Sub
 
     Private Sub Formulaire_Jeu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = accueil.ComboBox1.Text
         Randomize()
         Dim th As Theme = Donnees.get_Theme
         If (reglages.getTimerActif) Then
@@ -219,7 +220,7 @@ Public Class jeu
                 btn = tlp.Controls.Item((coordonnees_Demasque Mod Donnees.get_Colonne) * Donnees.get_Ligne + (coordonnees_Demasque \ Donnees.get_Colonne))
                 Btn_Clicked(btn, e)
             Else
-                MsgBox("Miskine t'es kéblo")
+                MsgBox("L'aide n'est pas disponible sur les coups qui relèvent du hasard...")
             End If
         End If
     End Sub

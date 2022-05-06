@@ -53,10 +53,10 @@ Partial Class themes
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(91, 153)
+        Me.RadioButton1.Location = New System.Drawing.Point(91, 401)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(104, 29)
-        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabIndex = 5
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Ukraine"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -77,10 +77,10 @@ Partial Class themes
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(91, 246)
+        Me.RadioButton3.Location = New System.Drawing.Point(91, 152)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(172, 29)
-        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabIndex = 0
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Thème original"
         Me.RadioButton3.UseVisualStyleBackColor = True
@@ -99,10 +99,10 @@ Partial Class themes
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(91, 294)
+        Me.RadioButton4.Location = New System.Drawing.Point(91, 452)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(108, 29)
-        Me.RadioButton4.TabIndex = 33
+        Me.RadioButton4.TabIndex = 6
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "Vietnam"
         Me.RadioButton4.UseVisualStyleBackColor = True
@@ -111,10 +111,10 @@ Partial Class themes
         '
         Me.RadioButton5.AutoSize = True
         Me.RadioButton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.Location = New System.Drawing.Point(91, 342)
+        Me.RadioButton5.Location = New System.Drawing.Point(91, 297)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(109, 29)
-        Me.RadioButton5.TabIndex = 34
+        Me.RadioButton5.TabIndex = 3
         Me.RadioButton5.TabStop = True
         Me.RadioButton5.Text = "Pologne"
         Me.RadioButton5.UseVisualStyleBackColor = True
@@ -123,10 +123,10 @@ Partial Class themes
         '
         Me.RadioButton6.AutoSize = True
         Me.RadioButton6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton6.Location = New System.Drawing.Point(91, 390)
+        Me.RadioButton6.Location = New System.Drawing.Point(90, 349)
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(110, 29)
-        Me.RadioButton6.TabIndex = 35
+        Me.RadioButton6.TabIndex = 4
         Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "Portugal"
         Me.RadioButton6.UseVisualStyleBackColor = True
@@ -135,10 +135,10 @@ Partial Class themes
         '
         Me.RadioButton7.AutoSize = True
         Me.RadioButton7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton7.Location = New System.Drawing.Point(91, 438)
+        Me.RadioButton7.Location = New System.Drawing.Point(91, 249)
         Me.RadioButton7.Name = "RadioButton7"
         Me.RadioButton7.Size = New System.Drawing.Size(97, 29)
-        Me.RadioButton7.TabIndex = 36
+        Me.RadioButton7.TabIndex = 2
         Me.RadioButton7.TabStop = True
         Me.RadioButton7.Text = "France"
         Me.RadioButton7.UseVisualStyleBackColor = True
