@@ -37,6 +37,11 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.fond">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.france">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
