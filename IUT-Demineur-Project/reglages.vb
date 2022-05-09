@@ -192,7 +192,7 @@
             TextBox2.Enabled = True
             timerActif = True
         Else
-            MsgBox("Si vous désactivé le timer, vos parties ne sont plus sauvegardées.", vbOKOnly, "Attention")
+    MsgBox("Si vous désactivez le timer, vos parties ne seront plus sauvegardées.", vbOKOnly, "Attention")
             TextBox2.Enabled = False
             timerActif = False
         End If
