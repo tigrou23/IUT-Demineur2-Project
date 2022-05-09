@@ -11,6 +11,11 @@ Public Class accueil
     End Sub
 
     Private Sub accueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        jeu.FormBorderStyle = FormBorderStyle.FixedSingle
+        reglages.FormBorderStyle = FormBorderStyle.FixedSingle
+        scores.FormBorderStyle = FormBorderStyle.FixedSingle
+        themes.FormBorderStyle = FormBorderStyle.FixedSingle
         'à optimiser mais indispensable pour charger les réglages
         reglages.Show()
         reglages.Hide()
