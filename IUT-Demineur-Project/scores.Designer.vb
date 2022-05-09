@@ -126,6 +126,7 @@ Partial Class scores
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "scores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "scores"

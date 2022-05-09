@@ -143,6 +143,8 @@ Partial Class accueil
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.MaximizeBox = False
         Me.Name = "accueil"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "accueil"
