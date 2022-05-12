@@ -42,10 +42,14 @@ Partial Class reglages
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,16 +58,19 @@ Partial Class reglages
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(38, 73)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(38, 79)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 13)
+        Me.Label1.Size = New System.Drawing.Size(225, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Taille du plateau de jeu :"
         '
         'HScrollBar1
         '
         Me.HScrollBar1.LargeChange = 1
-        Me.HScrollBar1.Location = New System.Drawing.Point(103, 106)
+        Me.HScrollBar1.Location = New System.Drawing.Point(103, 112)
         Me.HScrollBar1.Name = "HScrollBar1"
         Me.HScrollBar1.Size = New System.Drawing.Size(381, 31)
         Me.HScrollBar1.TabIndex = 4
@@ -71,16 +78,19 @@ Partial Class reglages
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(38, 218)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(38, 224)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(213, 13)
+        Me.Label2.Size = New System.Drawing.Size(400, 25)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Chemin d'accès au fichier de configuration :"
         '
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(103, 253)
+        Me.TextBox1.Location = New System.Drawing.Point(103, 259)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(381, 20)
         Me.TextBox1.TabIndex = 6
@@ -89,16 +99,19 @@ Partial Class reglages
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(38, 299)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(38, 305)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 13)
+        Me.Label3.Size = New System.Drawing.Size(194, 25)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Nombre de mine(s) :"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(103, 339)
+        Me.ListBox1.Location = New System.Drawing.Point(103, 345)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(241, 82)
         Me.ListBox1.TabIndex = 10
@@ -106,15 +119,18 @@ Partial Class reglages
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(38, 452)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label5.Location = New System.Drawing.Point(38, 458)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.Size = New System.Drawing.Size(157, 25)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Durée du timer :"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(103, 492)
+        Me.TextBox2.Location = New System.Drawing.Point(103, 498)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(104, 20)
         Me.TextBox2.TabIndex = 13
@@ -122,46 +138,59 @@ Partial Class reglages
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(215, 496)
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label6.Location = New System.Drawing.Point(215, 494)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.Size = New System.Drawing.Size(97, 25)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "minute(s)"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 562)
+        Me.Button1.BackColor = System.Drawing.Color.Black
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(394, 591)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(195, 50)
+        Me.Button1.Size = New System.Drawing.Size(209, 50)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Choix du thème"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(507, 115)
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label8.Location = New System.Drawing.Point(498, 121)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.Size = New System.Drawing.Size(23, 25)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "8"
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(387, 490)
+        Me.Button3.BackColor = System.Drawing.Color.Black
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.Location = New System.Drawing.Point(32, 589)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(195, 23)
+        Me.Button3.Size = New System.Drawing.Size(209, 54)
         Me.Button3.TabIndex = 19
-        Me.Button3.Text = "Restaurer les réglages par défaut"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Text = "réglages par défaut"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(126, 452)
+        Me.Label10.Location = New System.Drawing.Point(318, 498)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(148, 13)
+        Me.Label10.Size = New System.Drawing.Size(279, 25)
         Me.Label10.TabIndex = 21
         Me.Label10.Text = "Ce réglage doit être renseigné"
         Me.Label10.Visible = False
@@ -169,10 +198,11 @@ Partial Class reglages
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(257, 218)
+        Me.Label11.Location = New System.Drawing.Point(211, 280)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(148, 13)
+        Me.Label11.Size = New System.Drawing.Size(279, 25)
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Ce réglage doit être renseigné"
         Me.Label11.Visible = False
@@ -180,16 +210,19 @@ Partial Class reglages
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(507, 172)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(498, 178)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 13)
+        Me.Label4.Size = New System.Drawing.Size(23, 25)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "8"
         '
         'HScrollBar2
         '
         Me.HScrollBar2.LargeChange = 1
-        Me.HScrollBar2.Location = New System.Drawing.Point(103, 163)
+        Me.HScrollBar2.Location = New System.Drawing.Point(103, 169)
         Me.HScrollBar2.Name = "HScrollBar2"
         Me.HScrollBar2.Size = New System.Drawing.Size(381, 31)
         Me.HScrollBar2.TabIndex = 24
@@ -197,36 +230,66 @@ Partial Class reglages
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(526, 115)
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(526, 121)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(34, 13)
+        Me.Label9.Size = New System.Drawing.Size(64, 25)
         Me.Label9.TabIndex = 26
         Me.Label9.Text = "lignes"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(526, 172)
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Location = New System.Drawing.Point(526, 178)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(50, 13)
+        Me.Label12.Size = New System.Drawing.Size(92, 25)
         Me.Label12.TabIndex = 27
         Me.Label12.Text = "colonnes"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(103, 522)
+        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.CheckBox1.Location = New System.Drawing.Point(103, 533)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(138, 29)
         Me.CheckBox1.TabIndex = 30
         Me.CheckBox1.Text = "Timer activé"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Showcard Gothic", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label7.Location = New System.Drawing.Point(208, 18)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(196, 44)
+        Me.Label7.TabIndex = 32
+        Me.Label7.Text = "Réglages"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.IUT_Demineur_Project.My.Resources.Resources.txt_file_paper_archive_document_icon_219496
+        Me.PictureBox4.Location = New System.Drawing.Point(566, 239)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(52, 50)
+        Me.PictureBox4.TabIndex = 33
+        Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Visible = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.IUT_Demineur_Project.My.Resources.Resources.fleche
+        Me.PictureBox3.Image = Global.IUT_Demineur_Project.My.Resources.Resources.back1_89375_modified
         Me.PictureBox3.Location = New System.Drawing.Point(23, 22)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(36, 33)
@@ -236,9 +299,9 @@ Partial Class reglages
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.unlock
-        Me.PictureBox2.Location = New System.Drawing.Point(500, 232)
+        Me.PictureBox2.Location = New System.Drawing.Point(503, 240)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox2.Size = New System.Drawing.Size(47, 50)
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
         Me.PictureBox2.Visible = False
@@ -246,28 +309,34 @@ Partial Class reglages
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.IUT_Demineur_Project.My.Resources.Resources.lock
-        Me.PictureBox1.Location = New System.Drawing.Point(500, 232)
+        Me.PictureBox1.Location = New System.Drawing.Point(503, 239)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(47, 50)
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
         '
         'Button2
         '
         Me.Button2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.disquette
-        Me.Button2.Location = New System.Drawing.Point(443, 534)
+        Me.Button2.Location = New System.Drawing.Point(279, 580)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(80, 78)
         Me.Button2.TabIndex = 16
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'reglages
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(634, 633)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(634, 677)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.PictureBox2)
@@ -296,6 +365,7 @@ Partial Class reglages
         Me.Name = "reglages"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "reglages"
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -327,4 +397,7 @@ Partial Class reglages
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

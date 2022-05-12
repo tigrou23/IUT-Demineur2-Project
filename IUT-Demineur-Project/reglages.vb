@@ -33,6 +33,7 @@
             temps = TextBox2.Text
             nbBombe = ListBox1.SelectedIndex + 1
             TextBox1.Enabled = False
+            PictureBox4.Visible = False
             PictureBox2.Visible = False
             PictureBox1.Visible = True
             Hide()
@@ -56,6 +57,7 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        accueil.curseur()
         accueil.Enabled = False
         For i = 1 To (nbColonneDefaut * nbLigneDefaut) \ 2
             If i < nbBombeMax Then
@@ -109,6 +111,7 @@
         TextBox2.Text = tempsDefaut
         TextBox1.Text = Application.StartupPath & "\config.txt"
         TextBox1.Enabled = False
+        PictureBox4.Visible = False
         PictureBox2.Visible = False
         PictureBox1.Visible = True
         HScrollBar1.Value = nbMax / 2
@@ -129,12 +132,14 @@
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         TextBox1.Enabled = False
+        PictureBox4.Visible = False
         PictureBox2.Visible = False
         PictureBox1.Visible = True
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         TextBox1.Enabled = True
+        PictureBox4.Visible = True
         PictureBox1.Visible = False
         PictureBox2.Visible = True
     End Sub
@@ -209,6 +214,18 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Enabled = False
         themes.Show()
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        OpenFileDialog1.Filter = "Fichiers texte (*.txt)|*.txt"
+
+        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+            TextBox1.Text = OpenFileDialog1.FileName
+        End If
+    End Sub
+
+    Private Sub reglages_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        accueil.curseur()
     End Sub
 End Class
 

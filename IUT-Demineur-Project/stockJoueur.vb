@@ -35,9 +35,14 @@
 
     Public Sub refreshList()
         scores.ListBox1.Items.Clear()
+        scores.ListBox2.Items.Clear()
+        scores.ListBox3.Items.Clear()
         tab.Sort(New JoueurComparer())
         For Each j In tab
-            scores.ListBox1.Items.Add(j.getNom() & " : meilleur nombre de cases révélées : " & j.getNbCasePerf & " (" & j.getTempsPerf & " secondes)")
+            scores.ListBox1.Items.Add(j.getNom())
+            scores.ListBox2.Items.Add(j.getNbCasePerf)
+            scores.ListBox3.Items.Add(j.getTempsPerf & " secondes")
+
             scores.ComboBox1.Items.Add(j.getNom())
         Next
     End Sub

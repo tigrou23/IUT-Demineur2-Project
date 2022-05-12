@@ -33,7 +33,9 @@ Partial Class accueil
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -157,6 +159,16 @@ Partial Class accueil
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Le démineur"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.i_modified
+        Me.PictureBox2.Location = New System.Drawing.Point(716, 34)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(47, 50)
+        Me.PictureBox2.TabIndex = 26
+        Me.PictureBox2.TabStop = False
+        '
         'accueil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -164,6 +176,7 @@ Partial Class accueil
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = Global.IUT_Demineur_Project.My.Resources.Resources.fond
         Me.ClientSize = New System.Drawing.Size(800, 444)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -180,6 +193,7 @@ Partial Class accueil
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "accueil"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +209,5 @@ Partial Class accueil
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

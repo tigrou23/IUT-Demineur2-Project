@@ -22,7 +22,42 @@ IUT-Demineur-Project
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.Arrow">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.back1_89375_modified">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur2">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur3">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur4">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.disquette">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.documents_folder_18875">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -43,6 +78,16 @@ IUT-Demineur-Project
 </summary>
 </member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.france">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.i_modified">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.IMG_5130">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
@@ -92,6 +137,11 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.Screenshot_2022_05_11_at_17_57_48">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.themecontraste">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -112,12 +162,27 @@ IUT-Demineur-Project
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.tri_modified">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.txt_file_paper_archive_document_icon_219496">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.ukraine">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.unlock">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.unnamed">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>

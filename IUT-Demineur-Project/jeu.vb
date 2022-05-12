@@ -9,6 +9,7 @@ Public Class jeu
     End Sub
 
     Private Sub Formulaire_Jeu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        accueil.curseur()
         Me.Text = accueil.ComboBox1.Text
         Dim th As Theme = Donnees.get_Theme
         If (reglages.getTimerActif) Then
@@ -222,5 +223,9 @@ Public Class jeu
                 MsgBox("L'aide n'est pas disponible sur les coups qui relèvent du hasard...")
             End If
         End If
+    End Sub
+
+    Private Sub jeu_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        accueil.curseur()
     End Sub
 End Class

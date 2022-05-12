@@ -67,7 +67,7 @@ Partial Class jeu
         Me.Panel1.Controls.Add(Me.Drapeau)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(641, 65)
         Me.Panel1.TabIndex = 3
@@ -91,7 +91,7 @@ Partial Class jeu
         '
         Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.PictureBox3.Image = Global.IUT_Demineur_Project.My.Resources.Resources.pause
-        Me.PictureBox3.Location = New System.Drawing.Point(103, 16)
+        Me.PictureBox3.Location = New System.Drawing.Point(135, 16)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(31, 30)
         Me.PictureBox3.TabIndex = 6
@@ -100,7 +100,7 @@ Partial Class jeu
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.IUT_Demineur_Project.My.Resources.Resources.play
-        Me.PictureBox2.Location = New System.Drawing.Point(103, 16)
+        Me.PictureBox2.Location = New System.Drawing.Point(135, 16)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(31, 32)
         Me.PictureBox2.TabIndex = 5

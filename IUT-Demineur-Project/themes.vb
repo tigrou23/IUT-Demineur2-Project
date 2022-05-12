@@ -117,4 +117,11 @@
         Hide()
     End Sub
 
+    Private Sub themes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        accueil.curseur()
+    End Sub
+
+    Private Sub themes_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        accueil.curseur()
+    End Sub
 End Class

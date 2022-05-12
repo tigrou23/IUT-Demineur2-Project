@@ -11,6 +11,7 @@ Public Class accueil
     End Sub
 
     Private Sub accueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        curseur()
         FormBorderStyle = FormBorderStyle.FixedSingle
         jeu.FormBorderStyle = FormBorderStyle.FixedSingle
         reglages.FormBorderStyle = FormBorderStyle.FixedSingle
@@ -21,6 +22,15 @@ Public Class accueil
         reglages.Hide()
     End Sub
 
+    Public Sub curseur()
+        Dim cursor As Icon = My.Resources.curseur4
+        Me.Cursor = New Cursor(cursor.Handle)
+        scores.Cursor = New Cursor(cursor.Handle)
+        reglages.Cursor = New Cursor(cursor.Handle)
+        themes.Cursor = New Cursor(cursor.Handle)
+        jeu.Cursor = New Cursor(cursor.Handle)
+        informations.Cursor = New Cursor(cursor.Handle)
+    End Sub
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         reglages.Show()
     End Sub
@@ -65,6 +75,7 @@ Public Class accueil
     End Sub
 
     Private Sub accueil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        curseur()
         If reglages.aChange() = True Then
             If reglages.verifFichier() = True Then
                 stockJoueur.debut(reglages.getPath())
@@ -94,4 +105,12 @@ Public Class accueil
         scores.Show()
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Enabled = False
+        informations.Show()
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
 End Class
