@@ -29,7 +29,7 @@
             Next
         Next
     End Sub
-
+    'Placement aléatoire des bombes
     Public Sub placementBombes(ligne As Integer, colonne As Integer)
         Dim locLigne, locColonne As Integer
         Dim l1 As Integer, l2 As Integer, c1 As Integer, c2 As Integer
@@ -57,6 +57,7 @@
             placementBombe(i) = locLigne * nbColonnes + locColonne
         Next
     End Sub
+    'Placement des valeurs des cases "Nombre"
     Public Sub placementNombres()
         For Each b As Integer In placementBombe
             For l As Integer = -1 To 1
@@ -108,6 +109,7 @@
     Public Function retourne(ligne As Integer, colonne As Integer)
         Return grille(ligne)(colonne).get_Etat <> Box.Etat.Connu
     End Function
+    'Methode de marquage d'une case par un drapeau
     Public Function drapeau(ligne As Integer, colonne As Integer)
         If grille(ligne)(colonne).get_Etat = Box.Etat.Drapeau Then
             grille(ligne)(colonne).set_Etat(Box.Etat.Inconnu)
@@ -145,6 +147,7 @@
     Public Sub clear_ListVide()
         listeVide.Clear()
     End Sub
+    'Methode de selection d'une case avec les fleches du clavier
     Public Function Next_Box(ligne As Integer, colonne As Integer, orientation As Keys)
         Dim locLigne As Integer = ligne
         Dim locColonne As Integer = colonne
@@ -184,6 +187,7 @@
         End If
         Return locLigne * nbColonnes + locColonne
     End Function
+    'Methode de découvre automatique d'une case approprié
     Public Function Demasque()
         For l As Integer = 0 To nbLignes - 1
             For c As Integer = 0 To nbColonnes - 1
@@ -218,6 +222,7 @@
     Public Function Etat_Box(ligne As Integer, colonne As Integer)
         Return grille(ligne)(colonne).get_Etat
     End Function
+    'Methode de marquage automatique par un drapeau d'une case approprié
     Public Function Marque_Drapeau()
         For l As Integer = 0 To nbLignes - 1
             For c As Integer = 0 To nbColonnes - 1
