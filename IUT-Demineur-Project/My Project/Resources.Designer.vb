@@ -63,16 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Arrow() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Arrow", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property back1_89375_modified() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("back1_89375-modified", resourceCulture)
@@ -83,39 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
         '''</summary>
-        Friend ReadOnly Property curseur() As System.Drawing.Icon
+        Friend ReadOnly Property cursor() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("curseur", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-        '''</summary>
-        Friend ReadOnly Property curseur2() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("curseur2", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-        '''</summary>
-        Friend ReadOnly Property curseur3() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("curseur3", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-        '''</summary>
-        Friend ReadOnly Property curseur4() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("curseur4", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("cursor", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property

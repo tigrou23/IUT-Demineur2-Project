@@ -22,32 +22,12 @@ IUT-Demineur-Project
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
-<member name="P:IUT_Demineur_Project.My.Resources.Resources.Arrow">
-<summary>
-  Recherche une ressource localisée de type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:IUT_Demineur_Project.My.Resources.Resources.back1_89375_modified">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur">
-<summary>
-  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-</summary>
-</member>
-<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur2">
-<summary>
-  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-</summary>
-</member>
-<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur3">
-<summary>
-  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-</summary>
-</member>
-<member name="P:IUT_Demineur_Project.My.Resources.Resources.curseur4">
+<member name="P:IUT_Demineur_Project.My.Resources.Resources.cursor">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
 </summary>

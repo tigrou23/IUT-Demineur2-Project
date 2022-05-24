@@ -23,7 +23,7 @@ Public Class accueil
     End Sub
 
     Public Sub curseur()
-        Dim cursor As Icon = My.Resources.curseur4
+        Dim cursor As Icon = My.Resources.cursor
         Me.Cursor = New Cursor(cursor.Handle)
         scores.Cursor = New Cursor(cursor.Handle)
         reglages.Cursor = New Cursor(cursor.Handle)
