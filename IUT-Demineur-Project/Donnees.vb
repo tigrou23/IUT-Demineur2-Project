@@ -207,7 +207,7 @@
                             For j As Integer = -1 To 1
                                 If (i + l >= 0) And (j + c >= 0) And (i + l <= nbLignes - 1) And (j + c <= nbColonnes - 1) Then
                                     If grille(l + i)(c + j).get_Etat = Box.Etat.Inconnu Then
-                                        grille(l + i)(c + j).set_Etat(Box.Etat.Connu)
+                                        'grille(l + i)(c + j).set_Etat(Box.Etat.Connu)
                                         Return (l + i) * nbColonnes + (c + j)
                                     End If
                                 End If
