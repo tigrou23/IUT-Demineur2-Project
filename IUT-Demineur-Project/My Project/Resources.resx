@@ -205,15 +205,6 @@
   <data name="txt_file_paper_archive_document_icon_219496" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>txt_file_paper_archive_document_icon_219496.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="curseur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\IUT-Demineur2-Project\IUT-Demineur-Project\My Project\curseur.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="curseur2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\IUT-Demineur2-Project\IUT-Demineur-Project\My Project\curseur2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="curseur3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\IUT-Demineur2-Project\IUT-Demineur-Project\My Project\curseur3.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="curseur4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\IUT-Demineur2-Project\IUT-Demineur-Project\My Project\curseur4.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
