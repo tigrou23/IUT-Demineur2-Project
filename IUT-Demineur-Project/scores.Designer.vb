@@ -151,9 +151,9 @@ Partial Class scores
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(274, 86)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(83, 25)
+        Me.Label4.Size = New System.Drawing.Size(60, 25)
         Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Bombes"
+        Me.Label4.Text = "Cases"
         '
         'Label5
         '
